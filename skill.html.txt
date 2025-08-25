@@ -1,0 +1,211 @@
+File: skill.html
+Purpose: Individual skill detail page.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Details</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="about.html">About</a>
+    <a href="post.html">Post</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div id="skillContent" class="card"></div>
+  <a href="browse.html" class="btn">← Back to Browse</a>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("skillsharehub_loggedin") !== "true") {
+    window.location.href = "login.html";
+    return;
+  }
+
+  // Skill data
+  const skills = {
+    "Python": {
+      icon: "fa-brands fa-python",
+      desc: "Learn Python to build web apps, data analysis, AI, and automation.",
+      benefits: [
+        "High demand in jobs",
+        "Beginner-friendly and versatile",
+        "Used in AI, ML, and Data Science"
+      ]
+    },
+    "Java": {
+      icon: "fa-brands fa-java",
+      desc: "Master Java for enterprise apps, Android development, and backend systems.",
+      benefits: [
+        "Stable career choice",
+        "Cross-platform development",
+        "Powerful for large-scale apps"
+      ]
+    },
+    "Music": {
+      icon: "fa-solid fa-music",
+      desc: "Explore the world of rhythm, melody, and creativity.",
+      benefits: [
+        "Enhances creativity",
+        "Improves focus",
+        "Universal language of expression"
+      ]
+    },
+    "Drawing": {
+      icon: "fa-solid fa-paintbrush",
+      desc: "Express yourself through sketches, illustrations, and art.",
+      benefits: [
+        "Boosts imagination",
+        "Great stress relief",
+        "Improves observation skills"
+      ]
+    }
+  };
+
+  // Get query param
+  const params = new URLSearchParams(window.location.search);
+  const skillName = params.get("name");
+
+  const contentDiv = document.getElementById("skillContent");
+  if (skillName && skills[skillName]) {
+    const s = skills[skillName];
+    contentDiv.innerHTML = `
+      <h2><i class="${s.icon}"></i> ${skillName}</h2>
+      <p>${s.desc}</p>
+      <h3>Benefits:</h3>
+      <ul>${s.benefits.map(b => `<li>${b}</li>`).join("")}</ul>
+    `;
+  } else {
+    contentDiv.innerHTML = "<p>Skill not found.</p>";
+  }
+});
+</script>
+
+<div id="video-section" class="video-container"></div>
+
+<script>
+// Video links for each skill
+const videos = {
+  "Python": "https://www.youtube.com/embed/kqtD5dpn9C8",
+  "Java": "https://www.youtube.com/embed/UmnCZ7-9yDY",
+  "Music": "https://www.youtube.com/embed/rgaTLrZGlk0",
+  "Drawing": "https://www.youtube.com/embed/ewMksAbgdBI"
+};
+
+const params = new URLSearchParams(window.location.search);
+const skillName = params.get("name");
+
+if (skillName && videos[skillName]) {
+  document.getElementById("video-section").innerHTML = `
+    <h3>${skillName} Tutorial Video</h3>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="${videos[skillName]}" 
+        title="${skillName} tutorial video" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>`;
+}
+</script>
+
+<div id="recommended-section" class="recommended-container"></div>
+
+<script>
+// Recommended skills with mini video previews
+const recommendations = {
+  "Python": [
+    { name: "Java", icon: "☕", desc: "Strongly-typed language for robust apps", video: "UmnCZ7-9yDY" },
+    { name: "Drawing", icon: "🎨", desc: "Boost creativity with sketching", video: "ewMksAbgdBI" }
+  ],
+  "Java": [
+    { name: "Python", icon: "🐍", desc: "Popular scripting language", video: "kqtD5dpn9C8" },
+    { name: "Music", icon: "🎵", desc: "Learn rhythm & melody", video: "rgaTLrZGlk0" }
+  ],
+  "Music": [
+    { name: "Drawing", icon: "🎨", desc: "Visual art expression", video: "ewMksAbgdBI" },
+    { name: "Python", icon: "🐍", desc: "Coding made easy", video: "kqtD5dpn9C8" }
+  ],
+  "Drawing": [
+    { name: "Music", icon: "🎵", desc: "Explore sound & creativity", video: "rgaTLrZGlk0" },
+    { name: "Java", icon: "☕", desc: "Build enterprise-grade apps", video: "UmnCZ7-9yDY" }
+  ]
+};
+
+const recContainer = document.getElementById("recommended-section");
+if (skillName && recommendations[skillName]) {
+  let cards = "";
+  recommendations[skillName].forEach(rec => {
+    cards += `
+      <div class="rec-card">
+        <h4>${rec.icon} ${rec.name}</h4>
+        <p>${rec.desc}</p>
+        <div class="video-wrapper mini">
+          <iframe src="https://www.youtube.com/embed/${rec.video}?autoplay=1&mute=1&loop=1&controls=0&playlist=${rec.video}" 
+            title="${rec.name} preview video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <a class="learn-btn" href="skill.html?name=${rec.name}">Learn More</a>
+      </div>`;
+  });
+  recContainer.innerHTML = `<h3>Recommended Next Skills</h3><div class="rec-grid">${cards}</div>`;
+}
+</script>
+
+<div id="notes-section" class="notes-container">
+  <h3>Your Notes</h3>
+  <textarea id="skill-notes" placeholder="Write your notes here..."></textarea>
+  <button id="download-notes">Download Notes</button>
+  <p id="save-status"></p>
+</div>
+
+<script>
+const notesBox = document.getElementById("skill-notes");
+
+const noteTemplates = {
+  "Python": `📌 Key Concepts:\n- Variables & Data Types\n- Loops & Conditions\n- Functions\n- Libraries\n\n💡 Example:\nprint("Hello, World!")`,
+  "Java": `📌 Key Concepts:\n- Classes & Objects\n- Inheritance\n- Interfaces\n- Collections\n\n💡 Example:\nSystem.out.println("Hello, World!");`,
+  "Music": `📌 Key Concepts:\n- Rhythm & Tempo\n- Scales & Chords\n- Melody & Harmony\n\n💡 Example:\nPractice a simple 4-beat rhythm.`,
+  "Drawing": `📌 Key Concepts:\n- Shapes & Proportions\n- Shading & Lighting\n- Perspective\n- Color Theory\n\n💡 Example:\nSketch a simple fruit bowl with shading.`
+};
+const status = document.getElementById("save-status");
+const downloadBtn = document.getElementById("download-notes");
+
+if (skillName) {
+  const saved = localStorage.getItem("notes_" + skillName);
+  if (saved) {
+  notesBox.value = saved;
+} else if (noteTemplates[skillName]) {
+  notesBox.value = noteTemplates[skillName];
+}
+
+  notesBox.addEventListener("input", () => {
+    localStorage.setItem("notes_" + skillName, notesBox.value);
+    status.textContent = "Notes saved ✔";
+    setTimeout(() => { status.textContent = ""; }, 1500);
+  });
+
+  downloadBtn.addEventListener("click", () => {
+    const blob = new Blob([notesBox.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = skillName + "_notes.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+}
+</script>
+</body>
+
+
+
+</html>

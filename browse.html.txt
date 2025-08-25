@@ -1,0 +1,62 @@
+File: browse.html
+Purpose: Browse skills page; lists skills dynamically.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Browse - SkillShareHub</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="browse">
+  <header class="site-header">
+    <div class="brand">SkillShareHub</div>
+    <nav class="nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="browse.html" data-nav="browse">Browse</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="post.html" data-nav="post">Post</a>
+    </nav>
+    <div class="userbox">
+      <span id="welcomeUser"></span>
+      <button id="logoutBtn" class="btn small primary">Logout</button>
+    </div>
+  </header>
+
+  
+<main class="container">
+  <h1>Browse Skills</h1>
+  <div class="grid">
+    <div class="card">
+      <i class="fa-brands fa-python fa-2x"></i>
+      <h3><a href="skill.html?name=Python">Python</a></h3>
+      <p>Programming language for everything from web to AI.</p>
+    </div>
+    <div class="card">
+      <i class="fa-brands fa-java fa-2x"></i>
+      <h3><a href="skill.html?name=Java">Java</a></h3>
+      <p>Backend, Android, enterprise development.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-music fa-2x"></i>
+      <h3><a href="skill.html?name=Music">Music</a></h3>
+      <p>Learn instruments, singing, and music theory.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-paintbrush fa-2x"></i>
+      <h3><a href="skill.html?name=Drawing">Drawing</a></h3>
+      <p>Improve creativity and artistic expression.</p>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="site-footer">
+    <span>© 2025 SkillShareHub</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

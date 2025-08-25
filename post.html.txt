@@ -1,0 +1,55 @@
+File: post.html
+Purpose: Form to post a new skill (title + description).
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post - SkillShareHub</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="post">
+  <header class="site-header">
+    <div class="brand">SkillShareHub</div>
+    <nav class="nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="browse.html" data-nav="browse">Browse</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="post.html" data-nav="post">Post</a>
+    </nav>
+    <div class="userbox">
+      <span id="welcomeUser"></span>
+      <button id="logoutBtn" class="btn small primary">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="card">
+      <h2>Share a Tip</h2>
+      <form id="postForm" class="simple-form">
+        <label>
+          Title
+          <input type="text" id="postTitle" required />
+        </label>
+        <label>
+          Your Tip
+          <textarea id="postBody" rows="5" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Publish</button>
+      </form>
+      <h3 class="mt">Recent Tips</h3>
+      <ul id="postList" class="post-list"></ul>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2025 SkillShareHub</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
