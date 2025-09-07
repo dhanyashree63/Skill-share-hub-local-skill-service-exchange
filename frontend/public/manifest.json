@@ -1,9 +1,9 @@
 {
-  "short_name": "SkillShareHub",
-  "name": "Skill Share Hub - Learn Smarter",
+  "short_name": "Skill Share Hub",
+  "name": "Skill Share Hub - Learn & Grow",
   "icons": [
     {
-      "src": "myfavicon.ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
