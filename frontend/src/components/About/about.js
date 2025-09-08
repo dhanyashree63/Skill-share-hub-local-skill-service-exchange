@@ -38,16 +38,10 @@ const Founders = () => (
     justifyContent="center"
   >
     <FounderCard
-      src={profile1}
-      name="Alex Sharma"
+      src={dhanyashree}
+      name="Dhanyashree"
       title="Co-Founder"
-      bio="Alex leads product and engineering. Passionate about building learning experiences."
-    />
-    <FounderCard
-      src={profile2}
-      name="Priya Verma"
-      title="Co-Founder"
-      bio="Priya heads content and partnerships. She curates quality courses for all learners."
+      bio="Dhanyashree leads product and engineering. Passionate about building learning experiences."
     />
   </Stack>
 );
