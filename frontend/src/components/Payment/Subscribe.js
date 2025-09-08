@@ -52,7 +52,7 @@ const Subscribe = ({ user }) => {
             contact: "",
           },
           notes: {
-            address: 'Profile 1 from SkillShare',
+            address: `${user.name} from SkillShare`,
           },
           theme: {
             color: '#FFC800',
