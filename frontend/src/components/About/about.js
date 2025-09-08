@@ -14,8 +14,7 @@ import { RiSecurePaymentFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import introVideo from '../../assets/videos/intro.mp4';
 import termsAndCondition from '../../assets/docs/termsAndCondition';
-import profile1 from "../../assets/images/profile1.jpeg";
-import profile2 from "../../assets/images/profile2.jpeg";
+import dhanyashree from "../../assets/images/dhanyashree.jpeg";
 
 const FounderCard = ({ src, name, title, bio }) => (
   <VStack>
