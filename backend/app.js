@@ -40,6 +40,10 @@ app.use("/api/v1", users);
 app.use("/api/v1", payment);
 app.use("/api/v1", others);
 
+app.get("/", (req, res) => {
+  res.send("✅ Skill Share Hub Backend is running");
+});
+
 export default app;
 
 app.use(ErrorMiddleware);
