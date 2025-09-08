@@ -5,9 +5,8 @@ import {
   TiSocialInstagramCircular,
 } from 'react-icons/ti';
 import { DiGithub } from 'react-icons/di';
-import { FaLinkedin} from 'react-icons/fa';
+import { TiSocialLinkedinCircular } from "react-icons/ti";
 
-import {TiSocialLinkedinCircular} from "react-icons/ti";
 const Footer = () => {
   return (
     <Box padding={'4'} bg="blackAlpha.900" minH={'10vh'}>
@@ -17,7 +16,7 @@ const Footer = () => {
           <Heading
             fontFamily={'body'}
             size="sm"
-            children="@Priyanshu Malaviya"
+            children="Profile 1"
             color={'teal.400'}
           />
         </VStack>
@@ -28,13 +27,25 @@ const Footer = () => {
           color={'white'}
           fontSize="50"
         >
-          <a href="https://www.linkedin.com/in/priyanshumalaviya/" target={'blank'}>
+          <a
+            href="https://www.linkedin.com/in/dhanyashree-n-70a27a32b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target={'blank'}
+            rel="noopener noreferrer"
+          >
             <TiSocialLinkedinCircular />
           </a>
-          <a href="https://www.instagram.com/priyanshu_malaviya228/" target={'blank'}>
+          <a
+            href="https://www.instagram.com/dhanyashree7777?igsh=MXZwYXptNXo1ZzJzdg=="
+            target={'blank'}
+            rel="noopener noreferrer"
+          >
             <TiSocialInstagramCircular />
           </a>
-          <a href="https://github.com/Priyanshu9898" target={'blank'}>
+          <a
+            href="https://github.com/dhanyashree63"
+            target={'blank'}
+            rel="noopener noreferrer"
+          >
             <DiGithub />
           </a>
         </HStack>
