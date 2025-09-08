@@ -1,6 +1,6 @@
 # Deploying to Vercel
 
-This project is prepared to be deployed on Vercel.
+This project is prepared to be deployed on **Vercel**.
 
 ---
 
