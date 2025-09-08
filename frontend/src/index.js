@@ -15,5 +15,4 @@ root.render(
         <App />
       </ChakraProvider>
     </ReduxProvider>
-  // </React.StrictMode>
 );
