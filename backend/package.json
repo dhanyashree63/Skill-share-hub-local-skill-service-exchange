@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon server.js"
   },
-  "author": "Priyanshu Malaviya",
+  "author": "Profile 1",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
