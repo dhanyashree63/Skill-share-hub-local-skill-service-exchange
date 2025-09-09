@@ -1,91 +1,114 @@
+```js
 import mongoose from "mongoose";
-import { config } from "dotenv";
-import { Course } from "./models/Course.js";
+import dotenv from "dotenv";
+import path from "path";
+import fs from "fs";
 
-config();
+const envPath = path.join(process.cwd(), "config", "config.env");
+if (fs.existsSync(envPath)) {
+  dotenv.config({ path: envPath });
+} else {
+  dotenv.config();
+}
 
-const seedCourses = async () => {
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/skillshare";
+
+const sampleCourses = [
+  {
+    title: "Complete Web Development Bootcamp",
+    description: "Learn HTML, CSS, JavaScript, React and Node.js. Build real projects and launch your career.",
+    lectures: [
+      {
+        title: "Introduction",
+        description: "Course overview and setup",
+        video: {
+          public_id: "vid1",
+          url: "https://www.w3schools.com/html/mov_bbb.mp4",
+        },
+      },
+    ],
+    poster: {
+      public_id: "placeholder_webdev",
+      url: "https://via.placeholder.com/800x450.png?text=Web+Development",
+    },
+    views: 1200,
+    numOfVideos: 1,
+    category: "Web Development",
+    createdBy: "Admin",
+    createdAt: new Date(),
+  },
+  {
+    title: "Python for Everybody",
+    description: "Beginner-friendly Python course covering fundamentals, data structures, and real-world projects.",
+    lectures: [
+      {
+        title: "Getting Started with Python",
+        description: "Install Python and run first script",
+        video: {
+          public_id: "vid2",
+          url: "https://www.w3schools.com/html/mov_bbb.mp4",
+        },
+      },
+    ],
+    poster: {
+      public_id: "placeholder_python",
+      url: "https://via.placeholder.com/800x450.png?text=Python",
+    },
+    views: 900,
+    numOfVideos: 1,
+    category: "Programming Languages",
+    createdBy: "Admin",
+    createdAt: new Date(),
+  },
+  {
+    title: "UI / UX Design Essentials",
+    description: "Design stunning interfaces and compelling user experiences. Learn ideation, wireframing and prototyping.",
+    lectures: [
+      {
+        title: "What is UX?",
+        description: "Understanding UX vs UI",
+        video: {
+          public_id: "vid3",
+          url: "https://www.w3schools.com/html/mov_bbb.mp4",
+        },
+      },
+    ],
+    poster: {
+      public_id: "placeholder_uiux",
+      url: "https://via.placeholder.com/800x450.png?text=UI%2FUX+Design",
+    },
+    views: 650,
+    numOfVideos: 1,
+    category: "Design",
+    createdBy: "Admin",
+    createdAt: new Date(),
+  },
+];
+
+const runSeeder = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
+    console.log("Connecting to MongoDB:", MONGO_URI);
+    await mongoose.connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
 
-    console.log("MongoDB Connected...");
+    const coll = mongoose.connection.collection("courses");
 
-    // Clear old courses
-    await Course.deleteMany();
+    await coll.deleteMany({});
+    await coll.insertMany(sampleCourses);
 
-    // Insert demo courses
-    await Course.insertMany([
-      {
-        title: "Web Development Bootcamp",
-        description: "Learn HTML, CSS, JavaScript, React, and Node.js from scratch.",
-        category: "Web Development",
-        createdBy: "Admin",
-        poster: {
-          public_id: "sample1",
-          url: "https://via.placeholder.com/300x200.png?text=Web+Dev",
-        },
-      },
-      {
-        title: "Data Science Mastery",
-        description: "Master Python, Pandas, Machine Learning, and Data Visualization.",
-        category: "Data Science",
-        createdBy: "Admin",
-        poster: {
-          public_id: "sample2",
-          url: "https://via.placeholder.com/300x200.png?text=Data+Science",
-        },
-      },
-      {
-        title: "UI/UX Design",
-        description: "Learn Figma, Adobe XD, and principles of modern UI/UX design.",
-        category: "Design",
-        createdBy: "Admin",
-        poster: {
-          public_id: "sample3",
-          url: "https://via.placeholder.com/300x200.png?text=UI%2FUX",
-        },
-      },
-      {
-        title: "Cybersecurity Basics",
-        description: "Understand ethical hacking, security tools, and protecting networks.",
-        category: "Cybersecurity",
-        createdBy: "Admin",
-        poster: {
-          public_id: "sample4",
-          url: "https://via.placeholder.com/300x200.png?text=Cybersecurity",
-        },
-      },
-      {
-        title: "Cloud Computing with AWS",
-        description: "Hands-on introduction to AWS services, EC2, S3, and Lambda.",
-        category: "Cloud",
-        createdBy: "Admin",
-        poster: {
-          public_id: "sample5",
-          url: "https://via.placeholder.com/300x200.png?text=AWS+Cloud",
-        },
-      },
-      {
-        title: "Mobile App Development",
-        description: "Build Android and iOS apps using React Native.",
-        category: "Mobile Development",
-        createdBy: "Admin",
-        poster: {
-          public_id: "sample6",
-          url: "https://via.placeholder.com/300x200.png?text=Mobile+Apps",
-        },
-      },
-    ]);
-
-    console.log("✅ 6 Demo Courses Seeded!");
-    process.exit();
+    console.log("✅ Seed complete. Inserted sample courses into 'courses' collection.");
+    await mongoose.disconnect();
+    process.exit(0);
   } catch (err) {
-    console.error(err);
+    console.error("Seeding failed:", err);
+    try {
+      await mongoose.disconnect();
+    } catch (e) {}
     process.exit(1);
   }
 };
 
-seedCourses();
+runSeeder();
+```
