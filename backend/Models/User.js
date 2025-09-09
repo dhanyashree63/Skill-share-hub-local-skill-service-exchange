@@ -18,12 +18,24 @@ const UserModel = new mongoose.Schema({
     },
 
     password:{
-        type: String,
-        required : [true, "Please Enter your Password"],
-        minlength : [6, "Password Must Be Atleast 6 characters"],
-        select: false,
-        validate : validator.isAlphanumeric,
-    },
+    type: String,
+    required : [true, "Please Enter your Password"],
+    minlength : [6, "Password Must Be Atleast 6 characters"],
+    select: false,
+    validate: {
+      validator: function(v) {
+        // example options: minLength 6, require at least 1 lowercase, 1 uppercase, 1 number, 1 symbol
+        return validator.isStrongPassword(v, {
+          minLength: 6,
+          minLowercase: 1,
+          minUppercase: 1,
+          minNumbers: 1,
+          minSymbols: 1
+        });
+      },
+      message: "Password is not strong enough. Use mix of upper, lower, numbers and symbols."
+      }
+   },
     role:{
         type: String,
         enum: ["admin", "user"],
@@ -68,7 +80,7 @@ const UserModel = new mongoose.Schema({
 
 
     resetPasswordToken : String,
-    resetPasswordExpire: String,
+    resetPasswordExpire: Date,
 
 });
 
