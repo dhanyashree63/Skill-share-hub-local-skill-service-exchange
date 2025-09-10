@@ -1,0 +1,4301 @@
+{
+  "backend\\app.js": [
+    {
+      "line": 8,
+      "pattern": "payment",
+      "text": "import payment from \"./Routes/paymentRouter.js\";"
+    },
+    {
+      "line": 8,
+      "pattern": "pay",
+      "text": "import payment from \"./Routes/paymentRouter.js\";"
+    },
+    {
+      "line": 13,
+      "pattern": "config.env",
+      "text": "path: \"./config/config.env\""
+    },
+    {
+      "line": 40,
+      "pattern": "payment",
+      "text": "app.use(\"/api/v1\", payment);"
+    },
+    {
+      "line": 40,
+      "pattern": "pay",
+      "text": "app.use(\"/api/v1\", payment);"
+    }
+  ],
+  "backend\\config\\config.env": [
+    {
+      "line": 8,
+      "pattern": "MONGO_URI",
+      "text": "MONGO_URI=mongodb+srv://skillshare_user:Chandranshu@cluster0.clzkgnf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    },
+    {
+      "line": 11,
+      "pattern": "CLOUDINARY",
+      "text": "CLOUDINARY_NAME=dhfuudbww"
+    },
+    {
+      "line": 11,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "CLOUDINARY_NAME=dhfuudbww"
+    },
+    {
+      "line": 12,
+      "pattern": "CLOUDINARY",
+      "text": "CLOUDINARY_APIKEY=179238381678363"
+    },
+    {
+      "line": 12,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "CLOUDINARY_APIKEY=179238381678363"
+    },
+    {
+      "line": 13,
+      "pattern": "CLOUDINARY",
+      "text": "CLOUDINARY_APISECRET=kmivneFu7-cIFglhdmaPBybfLss"
+    },
+    {
+      "line": 13,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "CLOUDINARY_APISECRET=kmivneFu7-cIFglhdmaPBybfLss"
+    },
+    {
+      "line": 15,
+      "pattern": "Razorpay",
+      "text": "# Razorpay (dummy values for now)"
+    },
+    {
+      "line": 15,
+      "pattern": "pay",
+      "text": "# Razorpay (dummy values for now)"
+    }
+  ],
+  "backend\\config\\Database.js": [
+    {
+      "line": 5,
+      "pattern": "MONGO_URI",
+      "text": "const db = process.env.MONGO_URI"
+    }
+  ],
+  "backend\\controllers\\courseController.js": [
+    {
+      "line": 5,
+      "pattern": "cloudinary",
+      "text": "import cloudinary from \"cloudinary\";"
+    },
+    {
+      "line": 8,
+      "pattern": "getAllCourses",
+      "text": "export const getAllCourses = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 31,
+      "pattern": "createCourse",
+      "text": "export const createCourse = catchAsyncError( async (req, res, next) => {"
+    },
+    {
+      "line": 40,
+      "pattern": "file",
+      "text": "const file = req.file;"
+    },
+    {
+      "line": 41,
+      "pattern": "file",
+      "text": "// console.log(file);"
+    },
+    {
+      "line": 43,
+      "pattern": "file",
+      "text": "const fileUri = getDataUri(file);"
+    },
+    {
+      "line": 46,
+      "pattern": "CLOUDINARY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 46,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 46,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 46,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 47,
+      "pattern": "file",
+      "text": "myCloud = await cloudinary.v2.uploader.upload(fileUri.content);"
+    },
+    {
+      "line": 47,
+      "pattern": "cloudinary",
+      "text": "myCloud = await cloudinary.v2.uploader.upload(fileUri.content);"
+    },
+    {
+      "line": 50,
+      "pattern": "poster",
+      "text": "// Fallback poster if Cloudinary is not configured"
+    },
+    {
+      "line": 51,
+      "pattern": "poster",
+      "text": "const posterObj = myCloud"
+    },
+    {
+      "line": 53,
+      "pattern": "poster",
+      "text": ": { public_id: \"placeholder_poster\", url: \"https://via.placeholder.com/800x450.png?text=Course+Poster\" };"
+    },
+    {
+      "line": 60,
+      "pattern": "poster",
+      "text": "poster: posterObj,"
+    },
+    {
+      "line": 79,
+      "pattern": "file",
+      "text": "const file = req.file;"
+    },
+    {
+      "line": 80,
+      "pattern": "file",
+      "text": "if (!file) return next(new ErrorHandler(\"No video file provided\", 400));"
+    },
+    {
+      "line": 82,
+      "pattern": "file",
+      "text": "const fileUri = getDataUri(file);"
+    },
+    {
+      "line": 85,
+      "pattern": "CLOUDINARY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 85,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 85,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 85,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 87,
+      "pattern": "file",
+      "text": "uploadedVideo = await cloudinary.v2.uploader.upload(fileUri.content, { resource_type: \"video\" });"
+    },
+    {
+      "line": 87,
+      "pattern": "cloudinary",
+      "text": "uploadedVideo = await cloudinary.v2.uploader.upload(fileUri.content, { resource_type: \"video\" });"
+    },
+    {
+      "line": 146,
+      "pattern": "CLOUDINARY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 146,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 146,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 146,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 149,
+      "pattern": "cloudinary",
+      "text": "await cloudinary.v2.uploader.destroy(lecture.video.public_id, { resource_type: \"video\" });"
+    },
+    {
+      "line": 178,
+      "pattern": "CLOUDINARY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 178,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 178,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 178,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "if (process.env.CLOUDINARY_APIKEY && process.env.CLOUDINARY_APISECRET && process.env.CLOUDINARY_NAME) {"
+    },
+    {
+      "line": 180,
+      "pattern": "poster",
+      "text": "if (course.poster && course.poster.public_id) {"
+    },
+    {
+      "line": 181,
+      "pattern": "poster",
+      "text": "await cloudinary.v2.uploader.destroy(course.poster.public_id);"
+    },
+    {
+      "line": 181,
+      "pattern": "cloudinary",
+      "text": "await cloudinary.v2.uploader.destroy(course.poster.public_id);"
+    },
+    {
+      "line": 187,
+      "pattern": "cloudinary",
+      "text": "await cloudinary.v2.uploader.destroy(singleLecture.video.public_id, { resource_type: \"video\" });"
+    }
+  ],
+  "backend\\controllers\\OtherController.js": [
+    {
+      "line": 57,
+      "pattern": "required",
+      "text": "const requiredSize = 12 - stats.length;"
+    },
+    {
+      "line": 59,
+      "pattern": "required",
+      "text": "for (let i = 0; i < requiredSize; i++) {"
+    }
+  ],
+  "backend\\controllers\\paymentController.js": [
+    {
+      "line": 47,
+      "pattern": "payment",
+      "text": "export const paymentVerification = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 47,
+      "pattern": "pay",
+      "text": "export const paymentVerification = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 51,
+      "pattern": "payment",
+      "text": "const {razorpay_payment_id, razorpay_subscription_id, razorpay_signature} = req.body;"
+    },
+    {
+      "line": 51,
+      "pattern": "pay",
+      "text": "const {razorpay_payment_id, razorpay_subscription_id, razorpay_signature} = req.body;"
+    },
+    {
+      "line": 53,
+      "pattern": "payment",
+      "text": "// console.log(razorpay_payment_id, razorpay_subscription_id, razorpay_signature);"
+    },
+    {
+      "line": 53,
+      "pattern": "pay",
+      "text": "// console.log(razorpay_payment_id, razorpay_subscription_id, razorpay_signature);"
+    },
+    {
+      "line": 59,
+      "pattern": "payment",
+      "text": "razorpay_payment_id + \"|\" + subscriptionId, \"utf-8\""
+    },
+    {
+      "line": 59,
+      "pattern": "pay",
+      "text": "razorpay_payment_id + \"|\" + subscriptionId, \"utf-8\""
+    },
+    {
+      "line": 62,
+      "pattern": "pay",
+      "text": "const isAuthentic = generated_signature === razorpay_signature;"
+    },
+    {
+      "line": 68,
+      "pattern": "payment",
+      "text": "return res.redirect(`${process.env.FRONTEND_URL}/paymentfail`)"
+    },
+    {
+      "line": 68,
+      "pattern": "pay",
+      "text": "return res.redirect(`${process.env.FRONTEND_URL}/paymentfail`)"
+    },
+    {
+      "line": 72,
+      "pattern": "payment",
+      "text": "razorpay_payment_id,"
+    },
+    {
+      "line": 72,
+      "pattern": "pay",
+      "text": "razorpay_payment_id,"
+    },
+    {
+      "line": 73,
+      "pattern": "pay",
+      "text": "razorpay_subscription_id,"
+    },
+    {
+      "line": 74,
+      "pattern": "pay",
+      "text": "razorpay_signature"
+    },
+    {
+      "line": 83,
+      "pattern": "payment",
+      "text": "return res.redirect(`${process.env.FRONTEND_URL}/paymentSuccess?reference=${razorpay_payment_id}`)"
+    },
+    {
+      "line": 83,
+      "pattern": "pay",
+      "text": "return res.redirect(`${process.env.FRONTEND_URL}/paymentSuccess?reference=${razorpay_payment_id}`)"
+    },
+    {
+      "line": 105,
+      "pattern": "payment",
+      "text": "const payment = await Payment.findOne({"
+    },
+    {
+      "line": 105,
+      "pattern": "pay",
+      "text": "const payment = await Payment.findOne({"
+    },
+    {
+      "line": 106,
+      "pattern": "pay",
+      "text": "razorpay_subscription_id: subscriptionId,"
+    },
+    {
+      "line": 109,
+      "pattern": "payment",
+      "text": "// console.log(payment);"
+    },
+    {
+      "line": 109,
+      "pattern": "pay",
+      "text": "// console.log(payment);"
+    },
+    {
+      "line": 111,
+      "pattern": "payment",
+      "text": "const gap = Date.now() - payment.createdAt;"
+    },
+    {
+      "line": 111,
+      "pattern": "pay",
+      "text": "const gap = Date.now() - payment.createdAt;"
+    },
+    {
+      "line": 116,
+      "pattern": "payment",
+      "text": "await instance.payments.refund(payment.razorpay_payment_id);"
+    },
+    {
+      "line": 116,
+      "pattern": "pay",
+      "text": "await instance.payments.refund(payment.razorpay_payment_id);"
+    },
+    {
+      "line": 120,
+      "pattern": "payment",
+      "text": "await payment.remove();"
+    },
+    {
+      "line": 120,
+      "pattern": "pay",
+      "text": "await payment.remove();"
+    }
+  ],
+  "backend\\controllers\\UserController.js": [
+    {
+      "line": 8,
+      "pattern": "cloudinary",
+      "text": "import cloudinary from \"cloudinary\";"
+    },
+    {
+      "line": 12,
+      "pattern": "register",
+      "text": "export const register = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 14,
+      "pattern": "file",
+      "text": "const file = req.file;"
+    },
+    {
+      "line": 25,
+      "pattern": "avatar",
+      "text": "// --- safe avatar handling ---"
+    },
+    {
+      "line": 26,
+      "pattern": "avatar",
+      "text": "// Default placeholder avatar"
+    },
+    {
+      "line": 27,
+      "pattern": "avatar",
+      "text": "let avatarObj = {"
+    },
+    {
+      "line": 28,
+      "pattern": "avatar",
+      "text": "public_id: \"placeholder_avatar\","
+    },
+    {
+      "line": 32,
+      "pattern": "file",
+      "text": "// If client sent a file, try to process/upload it"
+    },
+    {
+      "line": 33,
+      "pattern": "file",
+      "text": "if (file) {"
+    },
+    {
+      "line": 34,
+      "pattern": "file",
+      "text": "const fileUri = getDataUri(file);"
+    },
+    {
+      "line": 39,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 39,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 40,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 40,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 41,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 41,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 44,
+      "pattern": "CLOUDINARY",
+      "text": "name: process.env.CLOUDINARY_NAME,"
+    },
+    {
+      "line": 44,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "name: process.env.CLOUDINARY_NAME,"
+    },
+    {
+      "line": 45,
+      "pattern": "CLOUDINARY",
+      "text": "key: process.env.CLOUDINARY_APIKEY ? \"loaded\" : \"missing\","
+    },
+    {
+      "line": 45,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "key: process.env.CLOUDINARY_APIKEY ? \"loaded\" : \"missing\","
+    },
+    {
+      "line": 46,
+      "pattern": "CLOUDINARY",
+      "text": "secret: process.env.CLOUDINARY_APISECRET ? \"loaded\" : \"missing\","
+    },
+    {
+      "line": 46,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "secret: process.env.CLOUDINARY_APISECRET ? \"loaded\" : \"missing\","
+    },
+    {
+      "line": 50,
+      "pattern": "avatar",
+      "text": "console.log(\"📤 Uploading avatar to Cloudinary...\");"
+    },
+    {
+      "line": 51,
+      "pattern": "file",
+      "text": "myCloud = await cloudinary.v2.uploader.upload(fileUri.content);"
+    },
+    {
+      "line": 51,
+      "pattern": "cloudinary",
+      "text": "myCloud = await cloudinary.v2.uploader.upload(fileUri.content);"
+    },
+    {
+      "line": 60,
+      "pattern": "avatar",
+      "text": "avatarObj = { public_id: myCloud.public_id, url: myCloud.secure_url };"
+    },
+    {
+      "line": 63,
+      "pattern": "avatar",
+      "text": "// --- end avatar handling ---"
+    },
+    {
+      "line": 69,
+      "pattern": "avatar",
+      "text": "avatar: avatarObj,"
+    },
+    {
+      "line": 72,
+      "pattern": "Register",
+      "text": "sendToken(res, user, \"Registered Successfully\", 201);"
+    },
+    {
+      "line": 76,
+      "pattern": "login",
+      "text": "export const login = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 107,
+      "pattern": "file",
+      "text": "export const getMyProfile = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 116,
+      "pattern": "file",
+      "text": "export const deleteMyProfile = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 126,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 126,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 127,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 127,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 128,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 128,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 131,
+      "pattern": "avatar",
+      "text": "if (user.avatar && user.avatar.public_id) {"
+    },
+    {
+      "line": 132,
+      "pattern": "avatar",
+      "text": "await cloudinary.v2.uploader.destroy(user.avatar.public_id);"
+    },
+    {
+      "line": 132,
+      "pattern": "cloudinary",
+      "text": "await cloudinary.v2.uploader.destroy(user.avatar.public_id);"
+    },
+    {
+      "line": 178,
+      "pattern": "file",
+      "text": "export const updateProfile = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 190,
+      "pattern": "file",
+      "text": "message: \"Profile updated successfully\","
+    },
+    {
+      "line": 194,
+      "pattern": "file",
+      "text": "export const updateProfilePicture = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 195,
+      "pattern": "file",
+      "text": "const file = req.file;"
+    },
+    {
+      "line": 196,
+      "pattern": "file",
+      "text": "if (!file) {"
+    },
+    {
+      "line": 197,
+      "pattern": "file",
+      "text": "return next(new ErrorHandler(\"No file provided\", 400));"
+    },
+    {
+      "line": 200,
+      "pattern": "file",
+      "text": "const fileUri = getDataUri(file);"
+    },
+    {
+      "line": 203,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 203,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 204,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 204,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 205,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 205,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 208,
+      "pattern": "avatar",
+      "text": "if (req.user.avatar && req.user.avatar.public_id) {"
+    },
+    {
+      "line": 209,
+      "pattern": "avatar",
+      "text": "await cloudinary.v2.uploader.destroy(req.user.avatar.public_id);"
+    },
+    {
+      "line": 209,
+      "pattern": "cloudinary",
+      "text": "await cloudinary.v2.uploader.destroy(req.user.avatar.public_id);"
+    },
+    {
+      "line": 212,
+      "pattern": "file",
+      "text": "const myCloud = await cloudinary.v2.uploader.upload(fileUri.content);"
+    },
+    {
+      "line": 212,
+      "pattern": "cloudinary",
+      "text": "const myCloud = await cloudinary.v2.uploader.upload(fileUri.content);"
+    },
+    {
+      "line": 214,
+      "pattern": "avatar",
+      "text": "req.user.avatar = {"
+    },
+    {
+      "line": 220,
+      "pattern": "avatar",
+      "text": "req.user.avatar ="
+    },
+    {
+      "line": 221,
+      "pattern": "avatar",
+      "text": "req.user.avatar || {"
+    },
+    {
+      "line": 222,
+      "pattern": "avatar",
+      "text": "public_id: \"placeholder_avatar\","
+    },
+    {
+      "line": 227,
+      "pattern": "avatar",
+      "text": "req.user.avatar ="
+    },
+    {
+      "line": 228,
+      "pattern": "avatar",
+      "text": "req.user.avatar || {"
+    },
+    {
+      "line": 229,
+      "pattern": "avatar",
+      "text": "public_id: \"placeholder_avatar\","
+    },
+    {
+      "line": 238,
+      "pattern": "file",
+      "text": "message: \"Profile picture updated successfully\","
+    },
+    {
+      "line": 264,
+      "pattern": "resetPassword",
+      "text": "export const resetPassword = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 267,
+      "pattern": "resetPassword",
+      "text": "const resetPasswordToken = crypto"
+    },
+    {
+      "line": 273,
+      "pattern": "resetPassword",
+      "text": "resetPasswordToken,"
+    },
+    {
+      "line": 274,
+      "pattern": "resetPassword",
+      "text": "resetPasswordExpire: {"
+    },
+    {
+      "line": 284,
+      "pattern": "resetPassword",
+      "text": "user.resetPasswordExpire = undefined;"
+    },
+    {
+      "line": 285,
+      "pattern": "resetPassword",
+      "text": "user.resetPasswordToken = undefined;"
+    },
+    {
+      "line": 295,
+      "pattern": "addToPlaylist",
+      "text": "export const addToPlaylist = catchAsyncError(async (req, res, next) => {"
+    },
+    {
+      "line": 303,
+      "pattern": "playlist",
+      "text": "const itemExit = user.playlist.find((item) => {"
+    },
+    {
+      "line": 313,
+      "pattern": "playlist",
+      "text": "user.playlist.push({"
+    },
+    {
+      "line": 315,
+      "pattern": "poster.url",
+      "text": "poster: course.poster.url,"
+    },
+    {
+      "line": 315,
+      "pattern": "poster",
+      "text": "poster: course.poster.url,"
+    },
+    {
+      "line": 315,
+      "pattern": "poster.url",
+      "text": "poster: course.poster.url,"
+    },
+    {
+      "line": 315,
+      "pattern": "poster.url",
+      "text": "poster: course.poster.url,"
+    },
+    {
+      "line": 334,
+      "pattern": "playlist",
+      "text": "const newPlaylist = user.playlist.filter((item) => {"
+    },
+    {
+      "line": 340,
+      "pattern": "playlist",
+      "text": "user.playlist = newPlaylist;"
+    },
+    {
+      "line": 393,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 393,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "process.env.CLOUDINARY_APIKEY &&"
+    },
+    {
+      "line": 394,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 394,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "process.env.CLOUDINARY_APISECRET &&"
+    },
+    {
+      "line": 395,
+      "pattern": "CLOUDINARY",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 395,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "process.env.CLOUDINARY_NAME"
+    },
+    {
+      "line": 398,
+      "pattern": "avatar",
+      "text": "if (user.avatar && user.avatar.public_id) {"
+    },
+    {
+      "line": 399,
+      "pattern": "avatar",
+      "text": "await cloudinary.v2.uploader.destroy(user.avatar.public_id);"
+    },
+    {
+      "line": 399,
+      "pattern": "cloudinary",
+      "text": "await cloudinary.v2.uploader.destroy(user.avatar.public_id);"
+    }
+  ],
+  "backend\\Middlewares\\multer.js": [
+    {
+      "line": 6,
+      "pattern": "file",
+      "text": "const singleUpload = multer({storage}).single(\"file\");"
+    }
+  ],
+  "backend\\Models\\Course.js": [
+    {
+      "line": 6,
+      "pattern": "required",
+      "text": "required: [\"true\", \"Please Enter Course Title\"],"
+    },
+    {
+      "line": 13,
+      "pattern": "required",
+      "text": "required: [\"true\", \"Please Enter Course Description\"],"
+    },
+    {
+      "line": 21,
+      "pattern": "required",
+      "text": "required: true,"
+    },
+    {
+      "line": 25,
+      "pattern": "required",
+      "text": "required: true,"
+    },
+    {
+      "line": 31,
+      "pattern": "required",
+      "text": "required : true,"
+    },
+    {
+      "line": 35,
+      "pattern": "required",
+      "text": "required : true,"
+    },
+    {
+      "line": 42,
+      "pattern": "poster",
+      "text": "poster: {"
+    },
+    {
+      "line": 45,
+      "pattern": "required",
+      "text": "required : true,"
+    },
+    {
+      "line": 49,
+      "pattern": "required",
+      "text": "required : true,"
+    },
+    {
+      "line": 63,
+      "pattern": "required",
+      "text": "required: [true, \"Course Category Required\"],"
+    },
+    {
+      "line": 68,
+      "pattern": "required",
+      "text": "required: [true, \"Course Author Name Required\"],"
+    }
+  ],
+  "backend\\Models\\Payment.js": [
+    {
+      "line": 3,
+      "pattern": "payment",
+      "text": "const paymentModel = new mongoose.Schema({"
+    },
+    {
+      "line": 3,
+      "pattern": "pay",
+      "text": "const paymentModel = new mongoose.Schema({"
+    },
+    {
+      "line": 5,
+      "pattern": "payment",
+      "text": "razorpay_payment_id: {"
+    },
+    {
+      "line": 5,
+      "pattern": "pay",
+      "text": "razorpay_payment_id: {"
+    },
+    {
+      "line": 7,
+      "pattern": "required",
+      "text": "required: true,"
+    },
+    {
+      "line": 9,
+      "pattern": "pay",
+      "text": "razorpay_subscription_id:{"
+    },
+    {
+      "line": 11,
+      "pattern": "required",
+      "text": "required: true,"
+    },
+    {
+      "line": 13,
+      "pattern": "pay",
+      "text": "razorpay_signature:{"
+    },
+    {
+      "line": 15,
+      "pattern": "required",
+      "text": "required: true,"
+    },
+    {
+      "line": 25,
+      "pattern": "payment",
+      "text": "const Payment = mongoose.model('Payment', paymentModel);"
+    },
+    {
+      "line": 25,
+      "pattern": "pay",
+      "text": "const Payment = mongoose.model('Payment', paymentModel);"
+    }
+  ],
+  "backend\\Models\\User.js": [
+    {
+      "line": 10,
+      "pattern": "required",
+      "text": "required : [true, \"Please Enter your name\"]"
+    },
+    {
+      "line": 15,
+      "pattern": "required",
+      "text": "required : [true, \"Please Enter your Email Address\"],"
+    },
+    {
+      "line": 22,
+      "pattern": "required",
+      "text": "required : [true, \"Please Enter your Password\"],"
+    },
+    {
+      "line": 56,
+      "pattern": "avatar",
+      "text": "avatar: {"
+    },
+    {
+      "line": 59,
+      "pattern": "required",
+      "text": "required : true,"
+    },
+    {
+      "line": 63,
+      "pattern": "required",
+      "text": "required : true,"
+    },
+    {
+      "line": 67,
+      "pattern": "playlist",
+      "text": "playlist : [{"
+    },
+    {
+      "line": 73,
+      "pattern": "poster",
+      "text": "poster: String,"
+    },
+    {
+      "line": 82,
+      "pattern": "resetPassword",
+      "text": "resetPasswordToken : String,"
+    },
+    {
+      "line": 83,
+      "pattern": "resetPassword",
+      "text": "resetPasswordExpire: Date,"
+    },
+    {
+      "line": 112,
+      "pattern": "resetPassword",
+      "text": "this.resetPasswordToken =  crypto.createHash(\"sha256\").update(resetToken).digest(\"hex\");"
+    },
+    {
+      "line": 113,
+      "pattern": "resetPassword",
+      "text": "this.resetPasswordExpire =  Date.now() + 15 * 60 * 1000;"
+    }
+  ],
+  "backend\\package-lock.json": [
+    {
+      "line": 4,
+      "pattern": "file",
+      "text": "\"lockfileVersion\": 2,"
+    },
+    {
+      "line": 13,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary\": \"^1.33.0\","
+    },
+    {
+      "line": 25,
+      "pattern": "pay",
+      "text": "\"razorpay\": \"^2.8.4\","
+    },
+    {
+      "line": 384,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 405,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 420,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 436,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 477,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 706,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 792,
+      "pattern": "file",
+      "text": "\"node_modules/@aws-sdk/shared-ini-file-loader\": {"
+    },
+    {
+      "line": 794,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/@aws-sdk/shared-ini-file-loader/-/shared-ini-file-loader-3.226.0.tgz\","
+    },
+    {
+      "line": 844,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 1538,
+      "pattern": "cloudinary",
+      "text": "\"node_modules/cloudinary\": {"
+    },
+    {
+      "line": 1540,
+      "pattern": "cloudinary",
+      "text": "\"resolved\": \"https://registry.npmjs.org/cloudinary/-/cloudinary-1.33.0.tgz\","
+    },
+    {
+      "line": 1543,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary-core\": \"^2.10.2\","
+    },
+    {
+      "line": 1555,
+      "pattern": "cloudinary",
+      "text": "\"node_modules/cloudinary-core\": {"
+    },
+    {
+      "line": 1557,
+      "pattern": "cloudinary",
+      "text": "\"resolved\": \"https://registry.npmjs.org/cloudinary-core/-/cloudinary-core-2.13.0.tgz\","
+    },
+    {
+      "line": 2028,
+      "pattern": "pay",
+      "text": "\"type\": \"paypal\","
+    },
+    {
+      "line": 2029,
+      "pattern": "pay",
+      "text": "\"url\": \"https://paypal.me/naturalintelligence\""
+    },
+    {
+      "line": 2032,
+      "pattern": "file",
+      "text": "\"node_modules/file-uri-to-path\": {"
+    },
+    {
+      "line": 2034,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-2.0.0.tgz\","
+    },
+    {
+      "line": 2126,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^4.0.0\","
+    },
+    {
+      "line": 2250,
+      "pattern": "file",
+      "text": "\"file-uri-to-path\": \"2\","
+    },
+    {
+      "line": 2572,
+      "pattern": "file",
+      "text": "\"node_modules/jsonfile\": {"
+    },
+    {
+      "line": 2574,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz\","
+    },
+    {
+      "line": 3367,
+      "pattern": "pay",
+      "text": "\"node_modules/razorpay\": {"
+    },
+    {
+      "line": 3369,
+      "pattern": "pay",
+      "text": "\"resolved\": \"https://registry.npmjs.org/razorpay/-/razorpay-2.8.4.tgz\","
+    },
+    {
+      "line": 4435,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 4453,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 4465,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 4478,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 4513,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 4700,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 4765,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": {"
+    },
+    {
+      "line": 4767,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/@aws-sdk/shared-ini-file-loader/-/shared-ini-file-loader-3.226.0.tgz\","
+    },
+    {
+      "line": 4808,
+      "pattern": "file",
+      "text": "\"@aws-sdk/shared-ini-file-loader\": \"3.226.0\","
+    },
+    {
+      "line": 5337,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary\": {"
+    },
+    {
+      "line": 5339,
+      "pattern": "cloudinary",
+      "text": "\"resolved\": \"https://registry.npmjs.org/cloudinary/-/cloudinary-1.33.0.tgz\","
+    },
+    {
+      "line": 5342,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary-core\": \"^2.10.2\","
+    },
+    {
+      "line": 5349,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary-core\": {"
+    },
+    {
+      "line": 5351,
+      "pattern": "cloudinary",
+      "text": "\"resolved\": \"https://registry.npmjs.org/cloudinary-core/-/cloudinary-core-2.13.0.tgz\","
+    },
+    {
+      "line": 5719,
+      "pattern": "file",
+      "text": "\"file-uri-to-path\": {"
+    },
+    {
+      "line": 5721,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-2.0.0.tgz\","
+    },
+    {
+      "line": 5794,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^4.0.0\","
+    },
+    {
+      "line": 5897,
+      "pattern": "file",
+      "text": "\"file-uri-to-path\": \"2\","
+    },
+    {
+      "line": 6134,
+      "pattern": "file",
+      "text": "\"jsonfile\": {"
+    },
+    {
+      "line": 6136,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz\","
+    },
+    {
+      "line": 6734,
+      "pattern": "pay",
+      "text": "\"razorpay\": {"
+    },
+    {
+      "line": 6736,
+      "pattern": "pay",
+      "text": "\"resolved\": \"https://registry.npmjs.org/razorpay/-/razorpay-2.8.4.tgz\","
+    }
+  ],
+  "backend\\package.json": [
+    {
+      "line": 11,
+      "pattern": "file",
+      "text": "\"author\": \"Profile 1\","
+    },
+    {
+      "line": 15,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary\": \"^1.33.0\","
+    },
+    {
+      "line": 27,
+      "pattern": "pay",
+      "text": "\"razorpay\": \"^2.8.4\","
+    }
+  ],
+  "backend\\Routes\\CourseRouter.js": [
+    {
+      "line": 2,
+      "pattern": "getAllCourses",
+      "text": "import { getAllCourses, createCourse, getAllLectures, createLectures, deleteLecture , deleteCourse} from '../controllers/courseController.js';"
+    },
+    {
+      "line": 2,
+      "pattern": "createCourse",
+      "text": "import { getAllCourses, createCourse, getAllLectures, createLectures, deleteLecture , deleteCourse} from '../controllers/courseController.js';"
+    },
+    {
+      "line": 2,
+      "pattern": "courseController",
+      "text": "import { getAllCourses, createCourse, getAllLectures, createLectures, deleteLecture , deleteCourse} from '../controllers/courseController.js';"
+    },
+    {
+      "line": 9,
+      "pattern": "getAllCourses",
+      "text": "router.route(\"/courses\").get(getAllCourses);"
+    },
+    {
+      "line": 12,
+      "pattern": "createCourse",
+      "text": "router.route(\"/createCourse\").post(isAuthenticated, authorizedAdmin, singleUpload, createCourse);"
+    }
+  ],
+  "backend\\Routes\\paymentRouter.js": [
+    {
+      "line": 2,
+      "pattern": "payment",
+      "text": "import { cancelSubscription, createSubscription, getRazorPayKey, paymentVerification } from \"../controllers/paymentController.js\";"
+    },
+    {
+      "line": 2,
+      "pattern": "pay",
+      "text": "import { cancelSubscription, createSubscription, getRazorPayKey, paymentVerification } from \"../controllers/paymentController.js\";"
+    },
+    {
+      "line": 12,
+      "pattern": "payment",
+      "text": "router.route(\"/verifyPayment\").post(isAuthenticated, paymentVerification);"
+    },
+    {
+      "line": 12,
+      "pattern": "pay",
+      "text": "router.route(\"/verifyPayment\").post(isAuthenticated, paymentVerification);"
+    },
+    {
+      "line": 14,
+      "pattern": "Razorpay",
+      "text": "// Get Razorpay key"
+    },
+    {
+      "line": 14,
+      "pattern": "pay",
+      "text": "// Get Razorpay key"
+    },
+    {
+      "line": 15,
+      "pattern": "pay",
+      "text": "router.route(\"/razorpayKey\").get(getRazorPayKey);"
+    }
+  ],
+  "backend\\Routes\\userRouter.js": [
+    {
+      "line": 3,
+      "pattern": "file",
+      "text": "import { login, register, logout, getMyProfile, changePassword, updateProfile,deleteMyProfile, updateProfilePicture, forgetPassword, resetPassword,removeFromPlaylist,  addToPlaylist, getAllUsers, changeUserRole, deleteUser } from '../controllers/UserController.js';"
+    },
+    {
+      "line": 3,
+      "pattern": "addToPlaylist",
+      "text": "import { login, register, logout, getMyProfile, changePassword, updateProfile,deleteMyProfile, updateProfilePicture, forgetPassword, resetPassword,removeFromPlaylist,  addToPlaylist, getAllUsers, changeUserRole, deleteUser } from '../controllers/UserController.js';"
+    },
+    {
+      "line": 3,
+      "pattern": "login",
+      "text": "import { login, register, logout, getMyProfile, changePassword, updateProfile,deleteMyProfile, updateProfilePicture, forgetPassword, resetPassword,removeFromPlaylist,  addToPlaylist, getAllUsers, changeUserRole, deleteUser } from '../controllers/UserController.js';"
+    },
+    {
+      "line": 3,
+      "pattern": "register",
+      "text": "import { login, register, logout, getMyProfile, changePassword, updateProfile,deleteMyProfile, updateProfilePicture, forgetPassword, resetPassword,removeFromPlaylist,  addToPlaylist, getAllUsers, changeUserRole, deleteUser } from '../controllers/UserController.js';"
+    },
+    {
+      "line": 3,
+      "pattern": "resetPassword",
+      "text": "import { login, register, logout, getMyProfile, changePassword, updateProfile,deleteMyProfile, updateProfilePicture, forgetPassword, resetPassword,removeFromPlaylist,  addToPlaylist, getAllUsers, changeUserRole, deleteUser } from '../controllers/UserController.js';"
+    },
+    {
+      "line": 9,
+      "pattern": "Register",
+      "text": "// To Register New User"
+    },
+    {
+      "line": 10,
+      "pattern": "register",
+      "text": "router.route(\"/register\").post(singleUpload, register);"
+    },
+    {
+      "line": 13,
+      "pattern": "login",
+      "text": "router.route(\"/login\").post(login);"
+    },
+    {
+      "line": 19,
+      "pattern": "file",
+      "text": "// Get My Profile"
+    },
+    {
+      "line": 20,
+      "pattern": "file",
+      "text": "router.route(\"/myProfile\").get(isAuthenticated, getMyProfile);"
+    },
+    {
+      "line": 20,
+      "pattern": "myProfile",
+      "text": "router.route(\"/myProfile\").get(isAuthenticated, getMyProfile);"
+    },
+    {
+      "line": 23,
+      "pattern": "file",
+      "text": "// Delete My Profile"
+    },
+    {
+      "line": 24,
+      "pattern": "file",
+      "text": "router.route(\"/myProfile\").delete(isAuthenticated, deleteMyProfile);"
+    },
+    {
+      "line": 24,
+      "pattern": "myProfile",
+      "text": "router.route(\"/myProfile\").delete(isAuthenticated, deleteMyProfile);"
+    },
+    {
+      "line": 30,
+      "pattern": "file",
+      "text": "// Update Profile"
+    },
+    {
+      "line": 31,
+      "pattern": "file",
+      "text": "router.route(\"/updateProfile\").put(isAuthenticated, updateProfile);"
+    },
+    {
+      "line": 33,
+      "pattern": "file",
+      "text": "// Update profile picture"
+    },
+    {
+      "line": 34,
+      "pattern": "file",
+      "text": "router.route(\"/updateProfilePicture\").put(isAuthenticated, singleUpload , updateProfilePicture);"
+    },
+    {
+      "line": 40,
+      "pattern": "resetPassword",
+      "text": "router.route(\"/resetPassword/:token\").put(resetPassword);"
+    },
+    {
+      "line": 43,
+      "pattern": "playlist",
+      "text": "router.route(\"/addtoplaylist\").post(isAuthenticated, addToPlaylist);"
+    },
+    {
+      "line": 43,
+      "pattern": "addToPlaylist",
+      "text": "router.route(\"/addtoplaylist\").post(isAuthenticated, addToPlaylist);"
+    },
+    {
+      "line": 47,
+      "pattern": "playlist",
+      "text": "router.route(\"/removefromplaylist\").delete(isAuthenticated, removeFromPlaylist);"
+    }
+  ],
+  "backend\\seedCourses.js": [
+    {
+      "line": 7,
+      "pattern": "config.env",
+      "text": "const envPath = path.join(process.cwd(), \"config\", \"config.env\");"
+    },
+    {
+      "line": 14,
+      "pattern": "MONGO_URI",
+      "text": "const MONGO_URI = process.env.MONGO_URI || \"mongodb://127.0.0.1:27017/skillshare\";"
+    },
+    {
+      "line": 19,
+      "pattern": "poster.url",
+      "text": "* - You can replace poster.url values with actual Cloudinary URLs later if you"
+    },
+    {
+      "line": 19,
+      "pattern": "poster",
+      "text": "* - You can replace poster.url values with actual Cloudinary URLs later if you"
+    },
+    {
+      "line": 19,
+      "pattern": "poster.url",
+      "text": "* - You can replace poster.url values with actual Cloudinary URLs later if you"
+    },
+    {
+      "line": 19,
+      "pattern": "poster.url",
+      "text": "* - You can replace poster.url values with actual Cloudinary URLs later if you"
+    },
+    {
+      "line": 35,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_webdev\", url: \"https://via.placeholder.com/900x500.png?text=Web+Development+Bootcamp\" },"
+    },
+    {
+      "line": 52,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_react\", url: \"https://via.placeholder.com/900x500.png?text=React+From+Zero+to+Hero\" },"
+    },
+    {
+      "line": 69,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_css\", url: \"https://via.placeholder.com/900x500.png?text=Modern+CSS\" },"
+    },
+    {
+      "line": 88,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_ai\", url: \"https://via.placeholder.com/900x500.png?text=Artificial+Intelligence\" },"
+    },
+    {
+      "line": 105,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_ml\", url: \"https://via.placeholder.com/900x500.png?text=Machine+Learning\" },"
+    },
+    {
+      "line": 122,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_dl\", url: \"https://via.placeholder.com/900x500.png?text=Deep+Learning\" },"
+    },
+    {
+      "line": 141,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_dsa1\", url: \"https://via.placeholder.com/900x500.png?text=Data+Structures\" },"
+    },
+    {
+      "line": 158,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_dsa2\", url: \"https://via.placeholder.com/900x500.png?text=Algorithms\" },"
+    },
+    {
+      "line": 175,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_cp\", url: \"https://via.placeholder.com/900x500.png?text=Competitive+Programming\" },"
+    },
+    {
+      "line": 194,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_android\", url: \"https://via.placeholder.com/900x500.png?text=Android+App+Dev\" },"
+    },
+    {
+      "line": 211,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_ios\", url: \"https://via.placeholder.com/900x500.png?text=iOS+SwiftUI\" },"
+    },
+    {
+      "line": 228,
+      "pattern": "poster",
+      "text": "poster: { public_id: \"placeholder_flutter\", url: \"https://via.placeholder.com/900x500.png?text=Flutter\" },"
+    },
+    {
+      "line": 239,
+      "pattern": "MONGO_URI",
+      "text": "await mongoose.connect(MONGO_URI, {"
+    }
+  ],
+  "backend\\server.js": [
+    {
+      "line": 4,
+      "pattern": "cloudinary",
+      "text": "import cloudinary from \"cloudinary\";"
+    },
+    {
+      "line": 5,
+      "pattern": "Razorpay",
+      "text": "import Razorpay from \"razorpay\";"
+    },
+    {
+      "line": 5,
+      "pattern": "pay",
+      "text": "import Razorpay from \"razorpay\";"
+    },
+    {
+      "line": 10,
+      "pattern": "config.env",
+      "text": "path: \"./config/config.env\""
+    },
+    {
+      "line": 18,
+      "pattern": "cloudinary",
+      "text": "cloudinary.v2.config({"
+    },
+    {
+      "line": 19,
+      "pattern": "CLOUDINARY",
+      "text": "cloud_name: process.env.CLOUDINARY_NAME,"
+    },
+    {
+      "line": 19,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "cloud_name: process.env.CLOUDINARY_NAME,"
+    },
+    {
+      "line": 20,
+      "pattern": "CLOUDINARY",
+      "text": "api_key: process.env.CLOUDINARY_APIKEY,"
+    },
+    {
+      "line": 20,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "api_key: process.env.CLOUDINARY_APIKEY,"
+    },
+    {
+      "line": 21,
+      "pattern": "CLOUDINARY",
+      "text": "api_secret: process.env.CLOUDINARY_APISECRET,"
+    },
+    {
+      "line": 21,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "api_secret: process.env.CLOUDINARY_APISECRET,"
+    },
+    {
+      "line": 24,
+      "pattern": "Razorpay",
+      "text": "export const instance = new Razorpay({"
+    },
+    {
+      "line": 24,
+      "pattern": "pay",
+      "text": "export const instance = new Razorpay({"
+    }
+  ],
+  "backend\\updatePostersToPicsum.js": [
+    {
+      "line": 6,
+      "pattern": "config.env",
+      "text": "dotenv.config({ path: \"./config/config.env\" });"
+    },
+    {
+      "line": 10,
+      "pattern": "MONGO_URI",
+      "text": "await mongoose.connect(process.env.MONGO_URI);"
+    },
+    {
+      "line": 15,
+      "pattern": "poster",
+      "text": "c.poster = c.poster || {};"
+    },
+    {
+      "line": 16,
+      "pattern": "poster.url",
+      "text": "c.poster.url = newUrl;"
+    },
+    {
+      "line": 16,
+      "pattern": "poster",
+      "text": "c.poster.url = newUrl;"
+    },
+    {
+      "line": 16,
+      "pattern": "poster.url",
+      "text": "c.poster.url = newUrl;"
+    },
+    {
+      "line": 16,
+      "pattern": "poster.url",
+      "text": "c.poster.url = newUrl;"
+    },
+    {
+      "line": 18,
+      "pattern": "poster",
+      "text": "console.log(\"Updated poster for:\", c.title);"
+    },
+    {
+      "line": 20,
+      "pattern": "poster",
+      "text": "console.log(\"✅ Done updating posters to picsum.photos\");"
+    }
+  ],
+  "backend\\Utils\\dataUri.js": [
+    {
+      "line": 5,
+      "pattern": "file",
+      "text": "const getDataUri = (file) => {"
+    },
+    {
+      "line": 7,
+      "pattern": "file",
+      "text": "const extName = path.extname(file.originalname).toString();"
+    },
+    {
+      "line": 10,
+      "pattern": "file",
+      "text": "return parser.format(extName, file.buffer);"
+    }
+  ],
+  "frontend\\package-lock.json": [
+    {
+      "line": 4,
+      "pattern": "file",
+      "text": "\"lockfileVersion\": 2,"
+    },
+    {
+      "line": 22,
+      "pattern": "pay",
+      "text": "\"razorpay\": \"^2.8.4\","
+    },
+    {
+      "line": 1938,
+      "pattern": "avatar",
+      "text": "\"node_modules/@chakra-ui/avatar\": {"
+    },
+    {
+      "line": 1940,
+      "pattern": "avatar",
+      "text": "\"resolved\": \"https://registry.npmjs.org/@chakra-ui/avatar/-/avatar-2.2.0.tgz\","
+    },
+    {
+      "line": 2433,
+      "pattern": "avatar",
+      "text": "\"@chakra-ui/avatar\": \"2.2.0\","
+    },
+    {
+      "line": 3688,
+      "pattern": "file",
+      "text": "\"jest-changed-files\": \"^27.5.1\","
+    },
+    {
+      "line": 4038,
+      "pattern": "file",
+      "text": "\"write-file-atomic\": \"^3.0.0\""
+    },
+    {
+      "line": 8520,
+      "pattern": "file",
+      "text": "\"file-entry-cache\": \"^6.0.1\","
+    },
+    {
+      "line": 9377,
+      "pattern": "file",
+      "text": "\"node_modules/file-entry-cache\": {"
+    },
+    {
+      "line": 9379,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-6.0.1.tgz\","
+    },
+    {
+      "line": 9388,
+      "pattern": "file",
+      "text": "\"node_modules/file-loader\": {"
+    },
+    {
+      "line": 9390,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/file-loader/-/file-loader-6.2.0.tgz\","
+    },
+    {
+      "line": 9407,
+      "pattern": "file",
+      "text": "\"node_modules/filelist\": {"
+    },
+    {
+      "line": 9409,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/filelist/-/filelist-1.0.4.tgz\","
+    },
+    {
+      "line": 9415,
+      "pattern": "file",
+      "text": "\"node_modules/filelist/node_modules/brace-expansion\": {"
+    },
+    {
+      "line": 9423,
+      "pattern": "file",
+      "text": "\"node_modules/filelist/node_modules/minimatch\": {"
+    },
+    {
+      "line": 9434,
+      "pattern": "file",
+      "text": "\"node_modules/filesize\": {"
+    },
+    {
+      "line": 9436,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/filesize/-/filesize-8.0.7.tgz\","
+    },
+    {
+      "line": 9679,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^6.0.1\","
+    },
+    {
+      "line": 9828,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^6.0.1\","
+    },
+    {
+      "line": 9896,
+      "pattern": "file",
+      "text": "\"node_modules/get-caller-file\": {"
+    },
+    {
+      "line": 9898,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz\","
+    },
+    {
+      "line": 11031,
+      "pattern": "file",
+      "text": "\"filelist\": \"^1.0.1\","
+    },
+    {
+      "line": 11129,
+      "pattern": "file",
+      "text": "\"node_modules/jest-changed-files\": {"
+    },
+    {
+      "line": 11131,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-27.5.1.tgz\","
+    },
+    {
+      "line": 13101,
+      "pattern": "file",
+      "text": "\"node_modules/jsonfile\": {"
+    },
+    {
+      "line": 13103,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz\","
+    },
+    {
+      "line": 13465,
+      "pattern": "pay",
+      "text": "\"integrity\": \"sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==\","
+    },
+    {
+      "line": 15098,
+      "pattern": "pay",
+      "text": "\"type\": \"liberapay\","
+    },
+    {
+      "line": 15099,
+      "pattern": "pay",
+      "text": "\"url\": \"https://liberapay.com/mrcgrtz\""
+    },
+    {
+      "line": 15661,
+      "pattern": "pay",
+      "text": "\"node_modules/razorpay\": {"
+    },
+    {
+      "line": 15663,
+      "pattern": "pay",
+      "text": "\"resolved\": \"https://registry.npmjs.org/razorpay/-/razorpay-2.8.4.tgz\","
+    },
+    {
+      "line": 15730,
+      "pattern": "file",
+      "text": "\"filesize\": \"^8.0.6\","
+    },
+    {
+      "line": 16067,
+      "pattern": "file",
+      "text": "\"file-loader\": \"^6.2.0\","
+    },
+    {
+      "line": 18801,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^6.0.1\","
+    },
+    {
+      "line": 19044,
+      "pattern": "file",
+      "text": "\"node_modules/write-file-atomic\": {"
+    },
+    {
+      "line": 19046,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.3.tgz\","
+    },
+    {
+      "line": 19121,
+      "pattern": "file",
+      "text": "\"get-caller-file\": \"^2.0.5\","
+    },
+    {
+      "line": 20440,
+      "pattern": "avatar",
+      "text": "\"@chakra-ui/avatar\": {"
+    },
+    {
+      "line": 20442,
+      "pattern": "avatar",
+      "text": "\"resolved\": \"https://registry.npmjs.org/@chakra-ui/avatar/-/avatar-2.2.0.tgz\","
+    },
+    {
+      "line": 20815,
+      "pattern": "avatar",
+      "text": "\"@chakra-ui/avatar\": \"2.2.0\","
+    },
+    {
+      "line": 21680,
+      "pattern": "file",
+      "text": "\"jest-changed-files\": \"^27.5.1\","
+    },
+    {
+      "line": 21941,
+      "pattern": "file",
+      "text": "\"write-file-atomic\": \"^3.0.0\""
+    },
+    {
+      "line": 25282,
+      "pattern": "file",
+      "text": "\"file-entry-cache\": \"^6.0.1\","
+    },
+    {
+      "line": 25910,
+      "pattern": "file",
+      "text": "\"file-entry-cache\": {"
+    },
+    {
+      "line": 25912,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-6.0.1.tgz\","
+    },
+    {
+      "line": 25918,
+      "pattern": "file",
+      "text": "\"file-loader\": {"
+    },
+    {
+      "line": 25920,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/file-loader/-/file-loader-6.2.0.tgz\","
+    },
+    {
+      "line": 25927,
+      "pattern": "file",
+      "text": "\"filelist\": {"
+    },
+    {
+      "line": 25929,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/filelist/-/filelist-1.0.4.tgz\","
+    },
+    {
+      "line": 25953,
+      "pattern": "file",
+      "text": "\"filesize\": {"
+    },
+    {
+      "line": 25955,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/filesize/-/filesize-8.0.7.tgz\","
+    },
+    {
+      "line": 26120,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^6.0.1\","
+    },
+    {
+      "line": 26232,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^6.0.1\","
+    },
+    {
+      "line": 26278,
+      "pattern": "file",
+      "text": "\"get-caller-file\": {"
+    },
+    {
+      "line": 26280,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz\","
+    },
+    {
+      "line": 27089,
+      "pattern": "file",
+      "text": "\"filelist\": \"^1.0.1\","
+    },
+    {
+      "line": 27148,
+      "pattern": "file",
+      "text": "\"jest-changed-files\": {"
+    },
+    {
+      "line": 27150,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-27.5.1.tgz\","
+    },
+    {
+      "line": 28602,
+      "pattern": "file",
+      "text": "\"jsonfile\": {"
+    },
+    {
+      "line": 28604,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz\","
+    },
+    {
+      "line": 28879,
+      "pattern": "pay",
+      "text": "\"integrity\": \"sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==\""
+    },
+    {
+      "line": 30280,
+      "pattern": "pay",
+      "text": "\"razorpay\": {"
+    },
+    {
+      "line": 30282,
+      "pattern": "pay",
+      "text": "\"resolved\": \"https://registry.npmjs.org/razorpay/-/razorpay-2.8.4.tgz\","
+    },
+    {
+      "line": 30337,
+      "pattern": "file",
+      "text": "\"filesize\": \"^8.0.6\","
+    },
+    {
+      "line": 30557,
+      "pattern": "file",
+      "text": "\"file-loader\": \"^6.2.0\","
+    },
+    {
+      "line": 32563,
+      "pattern": "file",
+      "text": "\"jsonfile\": \"^6.0.1\","
+    },
+    {
+      "line": 32782,
+      "pattern": "file",
+      "text": "\"write-file-atomic\": {"
+    },
+    {
+      "line": 32784,
+      "pattern": "file",
+      "text": "\"resolved\": \"https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.3.tgz\","
+    },
+    {
+      "line": 32836,
+      "pattern": "file",
+      "text": "\"get-caller-file\": \"^2.0.5\","
+    }
+  ],
+  "frontend\\package.json": [
+    {
+      "line": 17,
+      "pattern": "pay",
+      "text": "\"razorpay\": \"^2.8.4\","
+    }
+  ],
+  "frontend\\public\\index.html": [
+    {
+      "line": 21,
+      "pattern": "file",
+      "text": "Only files inside the `public` folder can be referenced from the HTML."
+    },
+    {
+      "line": 33,
+      "pattern": "file",
+      "text": "This HTML file is a template."
+    },
+    {
+      "line": 36,
+      "pattern": "file",
+      "text": "You can add webfonts, meta tags, or analytics to this file."
+    },
+    {
+      "line": 43,
+      "pattern": "pay",
+      "text": "<script src=\"https://checkout.razorpay.com/v1/checkout.js\"></script>"
+    },
+    {
+      "line": 43,
+      "pattern": "checkout",
+      "text": "<script src=\"https://checkout.razorpay.com/v1/checkout.js\"></script>"
+    }
+  ],
+  "frontend\\src\\App.js": [
+    {
+      "line": 7,
+      "pattern": "Register",
+      "text": "import Register from './components/Authentication/Register.js';"
+    },
+    {
+      "line": 18,
+      "pattern": "file",
+      "text": "import Profile from './components/Profile/Profile.js';"
+    },
+    {
+      "line": 19,
+      "pattern": "file",
+      "text": "import ChangePassword from './components/Profile/ChangePassword.js';"
+    },
+    {
+      "line": 20,
+      "pattern": "file",
+      "text": "import UpdateProfile from './components/Profile/UpdateProfile.js';"
+    },
+    {
+      "line": 28,
+      "pattern": "file",
+      "text": "import { myProfile } from './redux/actions/user.js';"
+    },
+    {
+      "line": 28,
+      "pattern": "myProfile",
+      "text": "import { myProfile } from './redux/actions/user.js';"
+    },
+    {
+      "line": 56,
+      "pattern": "file",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 56,
+      "pattern": "myProfile",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 73,
+      "pattern": "login",
+      "text": "<Route path=\"/login\" element={<ProtectedRoute isAuthenticated= {!isAuthenticated} redirect=\"/\"><Login /></ProtectedRoute>} />"
+    },
+    {
+      "line": 76,
+      "pattern": "Register",
+      "text": "<Route path=\"/register\" element={<ProtectedRoute isAuthenticated= {!isAuthenticated} redirect=\"/\"><Register /></ProtectedRoute>} />"
+    },
+    {
+      "line": 76,
+      "pattern": "register",
+      "text": "<Route path=\"/register\" element={<ProtectedRoute isAuthenticated= {!isAuthenticated} redirect=\"/\"><Register /></ProtectedRoute>} />"
+    },
+    {
+      "line": 78,
+      "pattern": "resetPassword",
+      "text": "<Route path=\"/resetPassword/:token\" element={<ResetPassword />} />"
+    },
+    {
+      "line": 83,
+      "pattern": "payment",
+      "text": "<Route path=\"/paymentfail\" element={<PaymentFail />} />"
+    },
+    {
+      "line": 83,
+      "pattern": "pay",
+      "text": "<Route path=\"/paymentfail\" element={<PaymentFail />} />"
+    },
+    {
+      "line": 84,
+      "pattern": "payment",
+      "text": "<Route path=\"/paymentSuccess\" element={<PaymentSuccess />} />"
+    },
+    {
+      "line": 84,
+      "pattern": "pay",
+      "text": "<Route path=\"/paymentSuccess\" element={<PaymentSuccess />} />"
+    },
+    {
+      "line": 86,
+      "pattern": "file",
+      "text": "<Route path=\"/profile\" element={"
+    },
+    {
+      "line": 88,
+      "pattern": "file",
+      "text": "<Profile user ={user} />"
+    },
+    {
+      "line": 91,
+      "pattern": "file",
+      "text": "<Route path=\"/updateprofile\"  element={<ProtectedRoute isAuthenticated= {isAuthenticated}><UpdateProfile user={user} /></ProtectedRoute>} />"
+    }
+  ],
+  "frontend\\src\\assets\\docs\\termsAndCondition.js": [
+    {
+      "line": 4,
+      "pattern": "register",
+      "text": "These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Video Streaming (\"Company\", “we”, “us”, or “our”), concerning your access to and use of the https://instagram.com/meabhisingh website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). We are registered in India and have our registered office at asasddasd, dasdasd, UP 4534534. You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY."
+    },
+    {
+      "line": 29,
+      "pattern": "required",
+      "text": "You may be required to register with the Site. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable."
+    },
+    {
+      "line": 29,
+      "pattern": "register",
+      "text": "You may be required to register with the Site. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable."
+    },
+    {
+      "line": 34,
+      "pattern": "payment",
+      "text": "We accept the following forms of payment:"
+    },
+    {
+      "line": 34,
+      "pattern": "pay",
+      "text": "We accept the following forms of payment:"
+    },
+    {
+      "line": 40,
+      "pattern": "price",
+      "text": "You may be required to purchase or pay a fee to access some of our services. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Site. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. We bill you through an online billing account for purchases made via the Site. Sales tax will be added to the price of purchases as deemed required by us. We may change prices at any time. All payments shall be in U.S. dollars."
+    },
+    {
+      "line": 40,
+      "pattern": "payment",
+      "text": "You may be required to purchase or pay a fee to access some of our services. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Site. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. We bill you through an online billing account for purchases made via the Site. Sales tax will be added to the price of purchases as deemed required by us. We may change prices at any time. All payments shall be in U.S. dollars."
+    },
+    {
+      "line": 40,
+      "pattern": "pay",
+      "text": "You may be required to purchase or pay a fee to access some of our services. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Site. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. We bill you through an online billing account for purchases made via the Site. Sales tax will be added to the price of purchases as deemed required by us. We may change prices at any time. All payments shall be in U.S. dollars."
+    },
+    {
+      "line": 40,
+      "pattern": "required",
+      "text": "You may be required to purchase or pay a fee to access some of our services. You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Site. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. We bill you through an online billing account for purchases made via the Site. Sales tax will be added to the price of purchases as deemed required by us. We may change prices at any time. All payments shall be in U.S. dollars."
+    },
+    {
+      "line": 42,
+      "pattern": "price",
+      "text": "You agree to pay all charges or fees at the prices then in effect for your purchases, and you authorize us to charge your chosen payment provider for any such amounts upon making your purchase. If your purchase is subject to recurring charges, then you consent to our charging your payment method on a recurring basis without requiring your prior approval for each recurring charge, until you notify us of your cancellation."
+    },
+    {
+      "line": 42,
+      "pattern": "payment",
+      "text": "You agree to pay all charges or fees at the prices then in effect for your purchases, and you authorize us to charge your chosen payment provider for any such amounts upon making your purchase. If your purchase is subject to recurring charges, then you consent to our charging your payment method on a recurring basis without requiring your prior approval for each recurring charge, until you notify us of your cancellation."
+    },
+    {
+      "line": 42,
+      "pattern": "pay",
+      "text": "You agree to pay all charges or fees at the prices then in effect for your purchases, and you authorize us to charge your chosen payment provider for any such amounts upon making your purchase. If your purchase is subject to recurring charges, then you consent to our charging your payment method on a recurring basis without requiring your prior approval for each recurring charge, until you notify us of your cancellation."
+    },
+    {
+      "line": 44,
+      "pattern": "payment",
+      "text": "We reserve the right to correct any errors or mistakes in pricing, even if we have already requested or received payment. We also reserve the right to refuse any order placed through the Site."
+    },
+    {
+      "line": 44,
+      "pattern": "pay",
+      "text": "We reserve the right to correct any errors or mistakes in pricing, even if we have already requested or received payment. We also reserve the right to refuse any order placed through the Site."
+    },
+    {
+      "line": 81,
+      "pattern": "file",
+      "text": "Sell or otherwise transfer your profile."
+    },
+    {
+      "line": 120,
+      "pattern": "file",
+      "text": "We reserve the right, but not the obligation, to: (1) monitor the Site for violations of these Terms of Use; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Terms of Use, including without limitation, reporting such user to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove from the Site or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Site in a manner designed to protect our rights and property and to facilitate the proper functioning of the Site."
+    },
+    {
+      "line": 137,
+      "pattern": "register",
+      "text": "If we terminate or suspend your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress."
+    },
+    {
+      "line": 142,
+      "pattern": "price",
+      "text": "We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Site. We also reserve the right to modify or discontinue all or part of the Site without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Site."
+    },
+    {
+      "line": 174,
+      "pattern": "required",
+      "text": "You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out of: (1) use of the Site; (2) breach of these Terms of Use; (3) any breach of your representations and warranties set forth in these Terms of Use; (4) your violation of the rights of a third party, including but not limited to intellectual property rights; or (5) any overt harmful act toward any other user of the Site with whom you connected via the Site. Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of it."
+    },
+    {
+      "line": 184,
+      "pattern": "payment",
+      "text": "Visiting the Site, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Site, satisfy any legal requirement that such communication be in writing. YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES, CONTRACTS, ORDERS, AND OTHER RECORDS, AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SITE. You hereby waive any rights or requirements under any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any means other than electronic means."
+    },
+    {
+      "line": 184,
+      "pattern": "pay",
+      "text": "Visiting the Site, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Site, satisfy any legal requirement that such communication be in writing. YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES, CONTRACTS, ORDERS, AND OTHER RECORDS, AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SITE. You hereby waive any rights or requirements under any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any means other than electronic means."
+    }
+  ],
+  "frontend\\src\\components\\About\\about.js": [
+    {
+      "line": 121,
+      "pattern": "Razorpay",
+      "text": "children={'Payment is secured by Razorpay'}"
+    },
+    {
+      "line": 121,
+      "pattern": "pay",
+      "text": "children={'Payment is secured by Razorpay'}"
+    }
+  ],
+  "frontend\\src\\components\\admin\\AdminCourses\\AdminCourse.js": [
+    {
+      "line": 26,
+      "pattern": "getAllCourses",
+      "text": "getAllCourses,"
+    },
+    {
+      "line": 73,
+      "pattern": "file",
+      "text": "myForm.append('file', video);"
+    },
+    {
+      "line": 90,
+      "pattern": "getAllCourses",
+      "text": "dispatch(getAllCourses());"
+    },
+    {
+      "line": 127,
+      "pattern": "courses.map",
+      "text": "{courses.map(item => ("
+    },
+    {
+      "line": 163,
+      "pattern": "poster.url",
+      "text": "<Image src={item.poster.url} />"
+    },
+    {
+      "line": 163,
+      "pattern": "poster",
+      "text": "<Image src={item.poster.url} />"
+    },
+    {
+      "line": 163,
+      "pattern": "poster.url",
+      "text": "<Image src={item.poster.url} />"
+    },
+    {
+      "line": 163,
+      "pattern": "poster.url",
+      "text": "<Image src={item.poster.url} />"
+    }
+  ],
+  "frontend\\src\\components\\admin\\AdminCourses\\CourseModal.js": [
+    {
+      "line": 38,
+      "pattern": "file",
+      "text": "const fileUploadCss = {"
+    },
+    {
+      "line": 50,
+      "pattern": "file",
+      "text": "const file = e.target.files[0];"
+    },
+    {
+      "line": 53,
+      "pattern": "file",
+      "text": "reader.readAsDataURL(file);"
+    },
+    {
+      "line": 57,
+      "pattern": "file",
+      "text": "setVideo(file);"
+    },
+    {
+      "line": 133,
+      "pattern": "required",
+      "text": "required"
+    },
+    {
+      "line": 134,
+      "pattern": "file",
+      "text": "type={'file'}"
+    },
+    {
+      "line": 137,
+      "pattern": "file",
+      "text": "'&::file-selector-button': {"
+    },
+    {
+      "line": 138,
+      "pattern": "file",
+      "text": "...fileUploadCss,"
+    }
+  ],
+  "frontend\\src\\components\\admin\\CreateCourses\\CreateCourses.js": [
+    {
+      "line": 16,
+      "pattern": "createCourse",
+      "text": "import { createCourse } from '../../../redux/actions/admin';"
+    },
+    {
+      "line": 24,
+      "pattern": "file",
+      "text": "const fileUploadCss = {"
+    },
+    {
+      "line": 54,
+      "pattern": "file",
+      "text": "const file = e.target.files[0];"
+    },
+    {
+      "line": 57,
+      "pattern": "file",
+      "text": "reader.readAsDataURL(file);"
+    },
+    {
+      "line": 61,
+      "pattern": "file",
+      "text": "setImage(file);"
+    },
+    {
+      "line": 72,
+      "pattern": "file",
+      "text": "myForm.append('file', image);"
+    },
+    {
+      "line": 73,
+      "pattern": "createCourse",
+      "text": "dispatch(createCourse(myForm));"
+    },
+    {
+      "line": 141,
+      "pattern": "accept=\"image",
+      "text": "accept=\"image/*\""
+    },
+    {
+      "line": 142,
+      "pattern": "required",
+      "text": "required"
+    },
+    {
+      "line": 143,
+      "pattern": "file",
+      "text": "type={'file'}"
+    },
+    {
+      "line": 146,
+      "pattern": "file",
+      "text": "'&::file-selector-button': {"
+    },
+    {
+      "line": 147,
+      "pattern": "file",
+      "text": "...fileUploadCss,"
+    }
+  ],
+  "frontend\\src\\components\\admin\\Dashboard\\Chart.js": [
+    {
+      "line": 15,
+      "pattern": "register(",
+      "text": "ChartJS.register("
+    },
+    {
+      "line": 15,
+      "pattern": "register",
+      "text": "ChartJS.register("
+    }
+  ],
+  "frontend\\src\\components\\Authentication\\ForgotPassword.js": [
+    {
+      "line": 6,
+      "pattern": "file",
+      "text": "import { forgetPassword } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 20,
+      "pattern": "file",
+      "text": "const { loading, message, error } = useSelector(state => state.profile);"
+    },
+    {
+      "line": 55,
+      "pattern": "resetPassword",
+      "text": "{/* <Link to={`/resetPassword/${params.token}`}> */}"
+    }
+  ],
+  "frontend\\src\\components\\Authentication\\Login.js": [
+    {
+      "line": 6,
+      "pattern": "login",
+      "text": "import {loginAction} from \"../../redux/actions/user.js\";"
+    },
+    {
+      "line": 32,
+      "pattern": "login",
+      "text": "dispatch(loginAction(email, password));"
+    },
+    {
+      "line": 71,
+      "pattern": "register",
+      "text": "<Link to=\"/register\">"
+    },
+    {
+      "line": 72,
+      "pattern": "register",
+      "text": "<Button variant=\"link\"  color={\"teal\"} className=\"registerTxt\" style={{textDecoration: \"none\"}}>Signup</Button>"
+    }
+  ],
+  "frontend\\src\\components\\Authentication\\Register.js": [
+    {
+      "line": 6,
+      "pattern": "register",
+      "text": "import { registerAction } from '../../redux/actions/user';"
+    },
+    {
+      "line": 8,
+      "pattern": "file",
+      "text": "const fileUploadStyle = {"
+    },
+    {
+      "line": 9,
+      "pattern": "file",
+      "text": "\"&::file-selector-button\": {"
+    },
+    {
+      "line": 20,
+      "pattern": "Register",
+      "text": "const Register = () => {"
+    },
+    {
+      "line": 48,
+      "pattern": "file",
+      "text": "const file = e.target.files[0];"
+    },
+    {
+      "line": 49,
+      "pattern": "file",
+      "text": "// console.log(file)"
+    },
+    {
+      "line": 52,
+      "pattern": "file",
+      "text": "reader.readAsDataURL(file);"
+    },
+    {
+      "line": 57,
+      "pattern": "file",
+      "text": "setImg(file);"
+    },
+    {
+      "line": 71,
+      "pattern": "file",
+      "text": "myForm.append(\"file\", img);"
+    },
+    {
+      "line": 73,
+      "pattern": "register",
+      "text": "dispatch(registerAction(myForm));"
+    },
+    {
+      "line": 116,
+      "pattern": "avatar",
+      "text": "<Input  id=\"avatar\" css={fileUploadStyle} focusBorderColor='teal.400' accept='image/*'  onChange={imageHandler} type={\"file\"} />"
+    },
+    {
+      "line": 116,
+      "pattern": "file",
+      "text": "<Input  id=\"avatar\" css={fileUploadStyle} focusBorderColor='teal.400' accept='image/*'  onChange={imageHandler} type={\"file\"} />"
+    },
+    {
+      "line": 122,
+      "pattern": "Register",
+      "text": "<Button type=\"submit\" colorScheme='teal' variant='solid' >Register</Button>"
+    },
+    {
+      "line": 127,
+      "pattern": "login",
+      "text": "<Link to=\"/login\">"
+    },
+    {
+      "line": 128,
+      "pattern": "register",
+      "text": "<Button variant=\"link\" color={\"teal\"} className=\"registerTxt\" style={{textDecoration: \"none\"}}>Login</Button>"
+    },
+    {
+      "line": 141,
+      "pattern": "Register",
+      "text": "export default Register;"
+    }
+  ],
+  "frontend\\src\\components\\Authentication\\ResetPassword.js": [
+    {
+      "line": 6,
+      "pattern": "file",
+      "text": "import { resetPassword } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 6,
+      "pattern": "resetPassword",
+      "text": "import { resetPassword } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 26,
+      "pattern": "file",
+      "text": "const { loading, message, error } = useSelector(state => state.profile);"
+    },
+    {
+      "line": 31,
+      "pattern": "resetPassword",
+      "text": "dispatch(resetPassword(params.token, password));"
+    },
+    {
+      "line": 42,
+      "pattern": "login",
+      "text": "navigate('/login');"
+    }
+  ],
+  "frontend\\src\\components\\Contact\\Contact.js": [
+    {
+      "line": 90,
+      "pattern": "register",
+      "text": "<Button variant=\"link\" color={\"teal\"} className=\"registerTxt\" style={{textDecoration: \"none\"}}>Click</Button>"
+    }
+  ],
+  "frontend\\src\\components\\Courses\\Courses.jsx": [
+    {
+      "line": 15,
+      "pattern": "getAllCourses",
+      "text": "import { getAllCourses } from '../../redux/actions/course';"
+    },
+    {
+      "line": 17,
+      "pattern": "file",
+      "text": "import { addToPlaylist } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 17,
+      "pattern": "addToPlaylist",
+      "text": "import { addToPlaylist } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 18,
+      "pattern": "file",
+      "text": "import { myProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 18,
+      "pattern": "myProfile",
+      "text": "import { myProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 26,
+      "pattern": "addToPlaylist",
+      "text": "addToPlaylistHandler,"
+    },
+    {
+      "line": 80,
+      "pattern": "addToPlaylist",
+      "text": "onClick={() => addToPlaylistHandler(id)}"
+    },
+    {
+      "line": 82,
+      "pattern": "playlist",
+      "text": "Add to playlist"
+    },
+    {
+      "line": 94,
+      "pattern": "addToPlaylist",
+      "text": "const addToPlaylistHandler = async couseId => {"
+    },
+    {
+      "line": 95,
+      "pattern": "addToPlaylist",
+      "text": "await dispatch(addToPlaylist(couseId));"
+    },
+    {
+      "line": 96,
+      "pattern": "file",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 96,
+      "pattern": "myProfile",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 115,
+      "pattern": "getAllCourses",
+      "text": "dispatch(getAllCourses(category, keyword));"
+    },
+    {
+      "line": 166,
+      "pattern": "courses.map",
+      "text": "courses.map(item => ("
+    },
+    {
+      "line": 172,
+      "pattern": "poster.url",
+      "text": "imageSrc={item.poster.url}"
+    },
+    {
+      "line": 172,
+      "pattern": "poster",
+      "text": "imageSrc={item.poster.url}"
+    },
+    {
+      "line": 172,
+      "pattern": "poster.url",
+      "text": "imageSrc={item.poster.url}"
+    },
+    {
+      "line": 172,
+      "pattern": "poster.url",
+      "text": "imageSrc={item.poster.url}"
+    },
+    {
+      "line": 176,
+      "pattern": "addToPlaylist",
+      "text": "addToPlaylistHandler={addToPlaylistHandler}"
+    }
+  ],
+  "frontend\\src\\components\\ErrorPage\\NotFound.js": [
+    {
+      "line": 26,
+      "pattern": "file",
+      "text": "Go to Profile"
+    }
+  ],
+  "frontend\\src\\components\\Footer\\Footer.js": [
+    {
+      "line": 19,
+      "pattern": "file",
+      "text": "children=\"Profile 1\""
+    },
+    {
+      "line": 31,
+      "pattern": "file",
+      "text": "href=\"https://www.linkedin.com/in/dhanyashree-n-70a27a32b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app\""
+    }
+  ],
+  "frontend\\src\\components\\Navbar\\Navbar.js": [
+    {
+      "line": 9,
+      "pattern": "file",
+      "text": "import { logoutProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 28,
+      "pattern": "file",
+      "text": "dispatch(logoutProfile());"
+    },
+    {
+      "line": 64,
+      "pattern": "file",
+      "text": "<Link to = \"/profile\" className=\"link\">"
+    },
+    {
+      "line": 65,
+      "pattern": "file",
+      "text": "<li>Profile</li>"
+    },
+    {
+      "line": 86,
+      "pattern": "login",
+      "text": "<Link className=\"mobile-btn link\" to = \"/login\" >"
+    },
+    {
+      "line": 105,
+      "pattern": "file",
+      "text": "<Link to =\"/profile\">"
+    },
+    {
+      "line": 106,
+      "pattern": "file",
+      "text": "<Button colorScheme='teal' variant='solid' mx={\"1\"}>Profile</Button>"
+    },
+    {
+      "line": 116,
+      "pattern": "file",
+      "text": "<Link to =\"/profile\">"
+    },
+    {
+      "line": 117,
+      "pattern": "file",
+      "text": "<Button colorScheme='teal' variant='solid' mx={\"4\"}>Profile</Button>"
+    },
+    {
+      "line": 133,
+      "pattern": "login",
+      "text": "<Link to =\"/login\">"
+    },
+    {
+      "line": 143,
+      "pattern": "login",
+      "text": "<Link to =\"/login\">"
+    },
+    {
+      "line": 156,
+      "pattern": "login",
+      "text": "{/* <Link to =\"/login\">"
+    }
+  ],
+  "frontend\\src\\components\\Payment\\PaymentFail.js": [
+    {
+      "line": 26,
+      "pattern": "file",
+      "text": "Go to Profile"
+    }
+  ],
+  "frontend\\src\\components\\Payment\\PaymentSuccess.js": [
+    {
+      "line": 31,
+      "pattern": "file",
+      "text": "Go to Profile"
+    }
+  ],
+  "frontend\\src\\components\\Payment\\Subscribe.js": [
+    {
+      "line": 21,
+      "pattern": "pay",
+      "text": "} = await axios.get(`${server}/razorpayKey`);"
+    },
+    {
+      "line": 62,
+      "pattern": "Razorpay",
+      "text": "const razor = new window.Razorpay(options);"
+    },
+    {
+      "line": 62,
+      "pattern": "pay",
+      "text": "const razor = new window.Razorpay(options);"
+    }
+  ],
+  "frontend\\src\\components\\Profile\\ChangePassword.js": [
+    {
+      "line": 6,
+      "pattern": "file",
+      "text": "import { changePassword } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 40,
+      "pattern": "file",
+      "text": "const { loading, message, error } = useSelector(state => state.profile);"
+    },
+    {
+      "line": 87,
+      "pattern": "file",
+      "text": "<Link to=\"/profile\">"
+    },
+    {
+      "line": 88,
+      "pattern": "file",
+      "text": "<Button variant=\"link\" color={\"teal\"}  className=\"forgot-password\" style={{textDecoration: \"none\"}}>Go to Profile</Button>"
+    }
+  ],
+  "frontend\\src\\components\\Profile\\Profile.js": [
+    {
+      "line": 24,
+      "pattern": "file",
+      "text": "import { removeFromPlaylist, updateProfilePicture } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 25,
+      "pattern": "file",
+      "text": "import { cancelSubscription, myProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 25,
+      "pattern": "myProfile",
+      "text": "import { cancelSubscription, myProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 28,
+      "pattern": "file",
+      "text": "const Profile = ({user}) => {"
+    },
+    {
+      "line": 33,
+      "pattern": "file",
+      "text": "const { loading, message, error } = useSelector(state => state.profile);"
+    },
+    {
+      "line": 43,
+      "pattern": "file",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 43,
+      "pattern": "myProfile",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 51,
+      "pattern": "file",
+      "text": "myForm.append('file', image);"
+    },
+    {
+      "line": 52,
+      "pattern": "file",
+      "text": "await dispatch(updateProfilePicture(myForm));"
+    },
+    {
+      "line": 54,
+      "pattern": "file",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 54,
+      "pattern": "myProfile",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 75,
+      "pattern": "file",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 75,
+      "pattern": "myProfile",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 87,
+      "pattern": "file",
+      "text": "const fileUploadCss = {"
+    },
+    {
+      "line": 101,
+      "pattern": "file",
+      "text": "<Heading m=\"4\" textAlign={['center', 'left']}  >Profile</Heading>"
+    },
+    {
+      "line": 105,
+      "pattern": "avatar",
+      "text": "<Avatar src={user.avatar.url} size='2xl' />"
+    },
+    {
+      "line": 149,
+      "pattern": "file",
+      "text": "<Link to='/updateprofile'>"
+    },
+    {
+      "line": 150,
+      "pattern": "file",
+      "text": "<Button  colorScheme='teal' variant='solid'>Update Profile</Button>"
+    },
+    {
+      "line": 177,
+      "pattern": "file",
+      "text": "export default Profile"
+    },
+    {
+      "line": 187,
+      "pattern": "file",
+      "text": "const fileUploadCss = {"
+    },
+    {
+      "line": 200,
+      "pattern": "file",
+      "text": "const file = e.target.files[0];"
+    },
+    {
+      "line": 203,
+      "pattern": "file",
+      "text": "reader.readAsDataURL(file);"
+    },
+    {
+      "line": 207,
+      "pattern": "file",
+      "text": "setImage(file);"
+    },
+    {
+      "line": 229,
+      "pattern": "file",
+      "text": "type={'file'}"
+    },
+    {
+      "line": 230,
+      "pattern": "file",
+      "text": "css={{ '&::file-selector-button': fileUploadCss }}"
+    }
+  ],
+  "frontend\\src\\components\\Profile\\UpdateProfile.js": [
+    {
+      "line": 5,
+      "pattern": "file",
+      "text": "import { updateProfile } from '../../redux/actions/profile';"
+    },
+    {
+      "line": 6,
+      "pattern": "file",
+      "text": "import { myProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 6,
+      "pattern": "myProfile",
+      "text": "import { myProfile } from '../../redux/actions/user';"
+    },
+    {
+      "line": 9,
+      "pattern": "file",
+      "text": "const UpdateProfile = ({user}) => {"
+    },
+    {
+      "line": 39,
+      "pattern": "file",
+      "text": "await dispatch(updateProfile(name, email));"
+    },
+    {
+      "line": 40,
+      "pattern": "file",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 40,
+      "pattern": "myProfile",
+      "text": "dispatch(myProfile());"
+    },
+    {
+      "line": 41,
+      "pattern": "file",
+      "text": "navigate('/profile');"
+    },
+    {
+      "line": 44,
+      "pattern": "file",
+      "text": "const { loading } = useSelector(state => state.profile);"
+    },
+    {
+      "line": 51,
+      "pattern": "file",
+      "text": "<Heading  fontSize={\"32\"} textAlign=\"center\">Update Profile</Heading>"
+    },
+    {
+      "line": 76,
+      "pattern": "file",
+      "text": "<Link to=\"/profile\">"
+    },
+    {
+      "line": 77,
+      "pattern": "file",
+      "text": "<Button variant=\"link\" color={\"teal\"}  className=\"forgot-password\" style={{textDecoration: \"none\"}}>Go to Profile</Button>"
+    },
+    {
+      "line": 89,
+      "pattern": "file",
+      "text": "export default UpdateProfile"
+    }
+  ],
+  "frontend\\src\\components\\RequestCourse\\Request.js": [
+    {
+      "line": 89,
+      "pattern": "register",
+      "text": "<Button variant=\"link\" color={\"teal\"} className=\"registerTxt\" style={{textDecoration: \"none\"}}>Click</Button>"
+    }
+  ],
+  "frontend\\src\\redux\\actions\\admin.js": [
+    {
+      "line": 4,
+      "pattern": "createCourse",
+      "text": "export const createCourse = formData => async dispatch => {"
+    },
+    {
+      "line": 8,
+      "pattern": "multipart",
+      "text": "'Content-Type': 'multipart/form-data',"
+    },
+    {
+      "line": 13,
+      "pattern": "createCourse",
+      "text": "dispatch({ type: 'createCourseRequest' });"
+    },
+    {
+      "line": 16,
+      "pattern": "createCourse",
+      "text": "`${server}/createCourse`,"
+    },
+    {
+      "line": 21,
+      "pattern": "createCourse",
+      "text": "dispatch({ type: 'createCourseSuccess', payload: data.message });"
+    },
+    {
+      "line": 21,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'createCourseSuccess', payload: data.message });"
+    },
+    {
+      "line": 25,
+      "pattern": "createCourse",
+      "text": "type: 'createCourseFail',"
+    },
+    {
+      "line": 26,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 40,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'deleteCourseSuccess', payload: data.message });"
+    },
+    {
+      "line": 44,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 53,
+      "pattern": "multipart",
+      "text": "'Content-type': 'multipart/form-data',"
+    },
+    {
+      "line": 65,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'addLectureSuccess', payload: data.message });"
+    },
+    {
+      "line": 69,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 86,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'deleteLectureSuccess', payload: data.message });"
+    },
+    {
+      "line": 90,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 104,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'getAllUsersSuccess', payload: data.users });"
+    },
+    {
+      "line": 108,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 122,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'updateUserRoleSuccess', payload: data.message });"
+    },
+    {
+      "line": 126,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 140,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'deleteUserSuccess', payload: data.message });"
+    },
+    {
+      "line": 144,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 158,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'getAdminStatsSuccess', payload: data });"
+    },
+    {
+      "line": 162,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    }
+  ],
+  "frontend\\src\\redux\\actions\\course.js": [
+    {
+      "line": 4,
+      "pattern": "getAllCourses",
+      "text": "export const getAllCourses ="
+    },
+    {
+      "line": 17,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'allCoursesSuccess', payload: data.courses });"
+    },
+    {
+      "line": 23,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 43,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'getCourseSuccess', payload: data.lectures });"
+    },
+    {
+      "line": 47,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    }
+  ],
+  "frontend\\src\\redux\\actions\\other.js": [
+    {
+      "line": 21,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'contactSuccess', payload: data.message });"
+    },
+    {
+      "line": 26,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 48,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'courseRequestSuccess', payload: data.message });"
+    },
+    {
+      "line": 52,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    }
+  ],
+  "frontend\\src\\redux\\actions\\profile.js": [
+    {
+      "line": 4,
+      "pattern": "file",
+      "text": "export const updateProfile = (name, email) => async dispatch => {"
+    },
+    {
+      "line": 6,
+      "pattern": "file",
+      "text": "dispatch({ type: 'updateProfileRequest' });"
+    },
+    {
+      "line": 16,
+      "pattern": "file",
+      "text": "`${server}/updateProfile`,"
+    },
+    {
+      "line": 24,
+      "pattern": "file",
+      "text": "dispatch({ type: 'updateProfileSuccess', payload: data.message });"
+    },
+    {
+      "line": 24,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'updateProfileSuccess', payload: data.message });"
+    },
+    {
+      "line": 28,
+      "pattern": "file",
+      "text": "type: 'updateProfileFail',"
+    },
+    {
+      "line": 29,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 34,
+      "pattern": "file",
+      "text": "export const updateProfilePicture = formdata => async dispatch => {"
+    },
+    {
+      "line": 36,
+      "pattern": "file",
+      "text": "dispatch({ type: 'updateProfilePictureRequest' });"
+    },
+    {
+      "line": 39,
+      "pattern": "multipart",
+      "text": "'Content-Type': 'multipart/form-data',"
+    },
+    {
+      "line": 47,
+      "pattern": "file",
+      "text": "`${server}/updateProfilePicture`,"
+    },
+    {
+      "line": 52,
+      "pattern": "file",
+      "text": "dispatch({ type: 'updateProfilePictureSuccess', payload: data.message });"
+    },
+    {
+      "line": 52,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'updateProfilePictureSuccess', payload: data.message });"
+    },
+    {
+      "line": 55,
+      "pattern": "file",
+      "text": "type: 'updateProfilePictureFail',"
+    },
+    {
+      "line": 56,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 81,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'changePasswordSuccess', payload: data.message });"
+    },
+    {
+      "line": 86,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 110,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'forgetPasswordSuccess', payload: data.message });"
+    },
+    {
+      "line": 115,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 120,
+      "pattern": "resetPassword",
+      "text": "export const resetPassword = (token, password) => async dispatch => {"
+    },
+    {
+      "line": 122,
+      "pattern": "resetPassword",
+      "text": "dispatch({ type: 'resetPasswordRequest' });"
+    },
+    {
+      "line": 131,
+      "pattern": "resetPassword",
+      "text": "`${server}/resetPassword/${token}`,"
+    },
+    {
+      "line": 136,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'resetPasswordSuccess', payload: data.message });"
+    },
+    {
+      "line": 136,
+      "pattern": "resetPassword",
+      "text": "dispatch({ type: 'resetPasswordSuccess', payload: data.message });"
+    },
+    {
+      "line": 140,
+      "pattern": "resetPassword",
+      "text": "type: 'resetPasswordFail',"
+    },
+    {
+      "line": 141,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 146,
+      "pattern": "addToPlaylist",
+      "text": "export const addToPlaylist = (id) => async dispatch => {"
+    },
+    {
+      "line": 148,
+      "pattern": "addToPlaylist",
+      "text": "dispatch({ type: 'addToPlaylistRequest' });"
+    },
+    {
+      "line": 160,
+      "pattern": "playlist",
+      "text": "`${server}/addtoplaylist`,"
+    },
+    {
+      "line": 165,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'addToPlaylistSuccess', payload: data.message });"
+    },
+    {
+      "line": 165,
+      "pattern": "addToPlaylist",
+      "text": "dispatch({ type: 'addToPlaylistSuccess', payload: data.message });"
+    },
+    {
+      "line": 169,
+      "pattern": "addToPlaylist",
+      "text": "type: 'addToPlaylistFail',"
+    },
+    {
+      "line": 170,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 184,
+      "pattern": "playlist",
+      "text": "`${server}/removefromplaylist?id=${id}`,"
+    },
+    {
+      "line": 188,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'removeFromPlaylistSuccess', payload: data.message });"
+    },
+    {
+      "line": 192,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    }
+  ],
+  "frontend\\src\\redux\\actions\\user.js": [
+    {
+      "line": 4,
+      "pattern": "login",
+      "text": "export const loginAction = (email, password) => async dispatch => {"
+    },
+    {
+      "line": 6,
+      "pattern": "login",
+      "text": "dispatch({ type: 'loginRequest' });"
+    },
+    {
+      "line": 18,
+      "pattern": "login",
+      "text": "`${server}/login`,"
+    },
+    {
+      "line": 23,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'loginSuccess', payload: data });"
+    },
+    {
+      "line": 23,
+      "pattern": "login",
+      "text": "dispatch({ type: 'loginSuccess', payload: data });"
+    },
+    {
+      "line": 25,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'loginFail', payload: error.response.data.message });"
+    },
+    {
+      "line": 25,
+      "pattern": "login",
+      "text": "dispatch({ type: 'loginFail', payload: error.response.data.message });"
+    },
+    {
+      "line": 29,
+      "pattern": "register",
+      "text": "export const registerAction = (formData) => async dispatch => {"
+    },
+    {
+      "line": 31,
+      "pattern": "register",
+      "text": "dispatch({ type: 'registerRequest' });"
+    },
+    {
+      "line": 37,
+      "pattern": "multipart",
+      "text": "'Content-Type': 'multipart/form-data',"
+    },
+    {
+      "line": 43,
+      "pattern": "register",
+      "text": "`${server}/register`,"
+    },
+    {
+      "line": 48,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'registerSuccess', payload: data });"
+    },
+    {
+      "line": 48,
+      "pattern": "register",
+      "text": "dispatch({ type: 'registerSuccess', payload: data });"
+    },
+    {
+      "line": 50,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'registerFail', payload: error.response.data.message });"
+    },
+    {
+      "line": 50,
+      "pattern": "register",
+      "text": "dispatch({ type: 'registerFail', payload: error.response.data.message });"
+    },
+    {
+      "line": 55,
+      "pattern": "file",
+      "text": "export const myProfile = () => async dispatch => {"
+    },
+    {
+      "line": 55,
+      "pattern": "myProfile",
+      "text": "export const myProfile = () => async dispatch => {"
+    },
+    {
+      "line": 64,
+      "pattern": "file",
+      "text": "`${server}/myProfile`,"
+    },
+    {
+      "line": 64,
+      "pattern": "myProfile",
+      "text": "`${server}/myProfile`,"
+    },
+    {
+      "line": 69,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'loadUserSuccess', payload: data.user });"
+    },
+    {
+      "line": 71,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'loadUserFail', payload: error.response.data.message });"
+    },
+    {
+      "line": 75,
+      "pattern": "file",
+      "text": "export const logoutProfile = () => async dispatch => {"
+    },
+    {
+      "line": 90,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'logoutSuccess', payload: data.user });"
+    },
+    {
+      "line": 92,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'logoutFail', payload: error.response.data.message });"
+    },
+    {
+      "line": 107,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'buySubscriptionSuccess', payload: data.subscriptionId });"
+    },
+    {
+      "line": 111,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    },
+    {
+      "line": 122,
+      "pattern": "pay",
+      "text": "dispatch({ type: 'cancelSubscriptionSuccess', payload: data.message });"
+    },
+    {
+      "line": 126,
+      "pattern": "pay",
+      "text": "payload: error.response.data.message,"
+    }
+  ],
+  "frontend\\src\\redux\\reducers\\adminReducer.js": [
+    {
+      "line": 11,
+      "pattern": "pay",
+      "text": "state.stats = action.payload.stats;"
+    },
+    {
+      "line": 12,
+      "pattern": "pay",
+      "text": "state.viewsCount = action.payload.viewsCount;"
+    },
+    {
+      "line": 13,
+      "pattern": "pay",
+      "text": "state.subscriptionCount = action.payload.subscriptionCount;"
+    },
+    {
+      "line": 14,
+      "pattern": "pay",
+      "text": "state.usersCount = action.payload.usersCount;"
+    },
+    {
+      "line": 15,
+      "pattern": "pay",
+      "text": "state.subscriptionPercentage = action.payload.subscriptionPercentage;"
+    },
+    {
+      "line": 16,
+      "pattern": "pay",
+      "text": "state.viewsPercentage = action.payload.viewsPercentage;"
+    },
+    {
+      "line": 17,
+      "pattern": "pay",
+      "text": "state.usersPercentage = action.payload.usersPercentage;"
+    },
+    {
+      "line": 18,
+      "pattern": "pay",
+      "text": "state.subscriptionProfit = action.payload.subscriptionProfit;"
+    },
+    {
+      "line": 19,
+      "pattern": "pay",
+      "text": "state.viewsProfit = action.payload.viewsProfit;"
+    },
+    {
+      "line": 20,
+      "pattern": "pay",
+      "text": "state.usersProfit = action.payload.usersProfit;"
+    },
+    {
+      "line": 24,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 32,
+      "pattern": "pay",
+      "text": "state.users = action.payload;"
+    },
+    {
+      "line": 36,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 43,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 47,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 54,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 58,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 61,
+      "pattern": "createCourse",
+      "text": "createCourseRequest: state => {"
+    },
+    {
+      "line": 64,
+      "pattern": "createCourse",
+      "text": "createCourseSuccess: (state, action) => {"
+    },
+    {
+      "line": 66,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 68,
+      "pattern": "createCourse",
+      "text": "createCourseFail: (state, action) => {"
+    },
+    {
+      "line": 70,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 77,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 81,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 89,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 93,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 101,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 105,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    }
+  ],
+  "frontend\\src\\redux\\reducers\\courseReducer.js": [
+    {
+      "line": 11,
+      "pattern": "pay",
+      "text": "state.courses = action.payload;"
+    },
+    {
+      "line": 15,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 23,
+      "pattern": "pay",
+      "text": "state.lectures = action.payload;"
+    },
+    {
+      "line": 27,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 30,
+      "pattern": "addToPlaylist",
+      "text": "addToPlaylistRequest: state => {"
+    },
+    {
+      "line": 33,
+      "pattern": "addToPlaylist",
+      "text": "addToPlaylistSuccess: (state, action) => {"
+    },
+    {
+      "line": 35,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 37,
+      "pattern": "addToPlaylist",
+      "text": "addToPlaylistFail: (state, action) => {"
+    },
+    {
+      "line": 39,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    }
+  ],
+  "frontend\\src\\redux\\reducers\\otherReducer.js": [
+    {
+      "line": 11,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 15,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 22,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 26,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    }
+  ],
+  "frontend\\src\\redux\\reducers\\userReducer.js": [
+    {
+      "line": 6,
+      "pattern": "login",
+      "text": "loginRequest: state => {"
+    },
+    {
+      "line": 9,
+      "pattern": "login",
+      "text": "loginSuccess: (state, action) => {"
+    },
+    {
+      "line": 12,
+      "pattern": "pay",
+      "text": "state.user = action.payload.user;"
+    },
+    {
+      "line": 13,
+      "pattern": "pay",
+      "text": "state.message = action.payload.message;"
+    },
+    {
+      "line": 16,
+      "pattern": "login",
+      "text": "loginFail: (state, action) => {"
+    },
+    {
+      "line": 19,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 22,
+      "pattern": "register",
+      "text": "registerRequest: state => {"
+    },
+    {
+      "line": 26,
+      "pattern": "register",
+      "text": "registerSuccess: (state, action) => {"
+    },
+    {
+      "line": 29,
+      "pattern": "pay",
+      "text": "state.user = action.payload.user;"
+    },
+    {
+      "line": 30,
+      "pattern": "pay",
+      "text": "state.message = action.payload.message;"
+    },
+    {
+      "line": 33,
+      "pattern": "register",
+      "text": "registerFail: (state, action) => {"
+    },
+    {
+      "line": 36,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 47,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 53,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 63,
+      "pattern": "pay",
+      "text": "state.user = action.payload;"
+    },
+    {
+      "line": 69,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 82,
+      "pattern": "file",
+      "text": "export const profileReducer = createReducer("
+    },
+    {
+      "line": 85,
+      "pattern": "file",
+      "text": "updateProfileRequest: state => {"
+    },
+    {
+      "line": 88,
+      "pattern": "file",
+      "text": "updateProfileSuccess: (state, action) => {"
+    },
+    {
+      "line": 90,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 92,
+      "pattern": "file",
+      "text": "updateProfileFail: (state, action) => {"
+    },
+    {
+      "line": 94,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 97,
+      "pattern": "file",
+      "text": "updateProfilePictureRequest: state => {"
+    },
+    {
+      "line": 100,
+      "pattern": "file",
+      "text": "updateProfilePictureSuccess: (state, action) => {"
+    },
+    {
+      "line": 102,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 104,
+      "pattern": "file",
+      "text": "updateProfilePictureFail: (state, action) => {"
+    },
+    {
+      "line": 106,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 114,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 118,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 126,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 130,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 133,
+      "pattern": "resetPassword",
+      "text": "resetPasswordRequest: state => {"
+    },
+    {
+      "line": 136,
+      "pattern": "resetPassword",
+      "text": "resetPasswordSuccess: (state, action) => {"
+    },
+    {
+      "line": 138,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 140,
+      "pattern": "resetPassword",
+      "text": "resetPasswordFail: (state, action) => {"
+    },
+    {
+      "line": 142,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 150,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 154,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 174,
+      "pattern": "pay",
+      "text": "state.subscriptionId = action.payload;"
+    },
+    {
+      "line": 178,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    },
+    {
+      "line": 186,
+      "pattern": "pay",
+      "text": "state.message = action.payload;"
+    },
+    {
+      "line": 190,
+      "pattern": "pay",
+      "text": "state.error = action.payload;"
+    }
+  ],
+  "frontend\\src\\redux\\Store.js": [
+    {
+      "line": 5,
+      "pattern": "file",
+      "text": "import { profileReducer, subscriptionReducer, userReducer } from \"./reducers/userReducer.js\";"
+    },
+    {
+      "line": 12,
+      "pattern": "file",
+      "text": "profile: profileReducer,"
+    }
+  ],
+  "repo_scan.js": [
+    {
+      "line": 11,
+      "pattern": "register(",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "signup",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "Register",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "SignUp",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "avatar",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "file",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "multipart",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 11,
+      "pattern": "register",
+      "text": "\"register(\", \"signup\", \"Register\", \"SignUp\", \"avatar\", \"file\", \"multipart\","
+    },
+    {
+      "line": 12,
+      "pattern": "poster.url",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 12,
+      "pattern": "poster",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 12,
+      "pattern": "posterUrl",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 12,
+      "pattern": "poster.url",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 12,
+      "pattern": "CourseCard",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 12,
+      "pattern": "course-card",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 12,
+      "pattern": "poster.url",
+      "text": "\"poster.url\", \"poster\", \"posterUrl\", \"poster.url\", \"CourseCard\", \"course-card\","
+    },
+    {
+      "line": 13,
+      "pattern": "courses.map",
+      "text": "\"courses.map\", \"getAllCourses\", \"createCourse\", \"courseController\", \"CourseController\","
+    },
+    {
+      "line": 13,
+      "pattern": "getAllCourses",
+      "text": "\"courses.map\", \"getAllCourses\", \"createCourse\", \"courseController\", \"CourseController\","
+    },
+    {
+      "line": 13,
+      "pattern": "createCourse",
+      "text": "\"courses.map\", \"getAllCourses\", \"createCourse\", \"courseController\", \"CourseController\","
+    },
+    {
+      "line": 13,
+      "pattern": "courseController",
+      "text": "\"courses.map\", \"getAllCourses\", \"createCourse\", \"courseController\", \"CourseController\","
+    },
+    {
+      "line": 13,
+      "pattern": "CourseController",
+      "text": "\"courses.map\", \"getAllCourses\", \"createCourse\", \"courseController\", \"CourseController\","
+    },
+    {
+      "line": 14,
+      "pattern": "cloudinary",
+      "text": "\"cloudinary\", \"CLOUDINARY\", \"CLOUDINARY_APIKEY\", \"CLOUDINARY_APISECRET\", \"CLOUDINARY_NAME\","
+    },
+    {
+      "line": 14,
+      "pattern": "CLOUDINARY",
+      "text": "\"cloudinary\", \"CLOUDINARY\", \"CLOUDINARY_APIKEY\", \"CLOUDINARY_APISECRET\", \"CLOUDINARY_NAME\","
+    },
+    {
+      "line": 14,
+      "pattern": "CLOUDINARY_APIKEY",
+      "text": "\"cloudinary\", \"CLOUDINARY\", \"CLOUDINARY_APIKEY\", \"CLOUDINARY_APISECRET\", \"CLOUDINARY_NAME\","
+    },
+    {
+      "line": 14,
+      "pattern": "CLOUDINARY_APISECRET",
+      "text": "\"cloudinary\", \"CLOUDINARY\", \"CLOUDINARY_APIKEY\", \"CLOUDINARY_APISECRET\", \"CLOUDINARY_NAME\","
+    },
+    {
+      "line": 14,
+      "pattern": "CLOUDINARY_NAME",
+      "text": "\"cloudinary\", \"CLOUDINARY\", \"CLOUDINARY_APIKEY\", \"CLOUDINARY_APISECRET\", \"CLOUDINARY_NAME\","
+    },
+    {
+      "line": 15,
+      "pattern": "MONGO_URI",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "config.env",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "isFree",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "price",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "payment",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "Razorpay",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "pay",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 15,
+      "pattern": "checkout",
+      "text": "\"MONGO_URI\", \"config.env\", \"isFree\", \"price\", \"payment\", \"Razorpay\", \"pay\", \"checkout\","
+    },
+    {
+      "line": 16,
+      "pattern": "file",
+      "text": "\"required\", \"type=\\\"file\\\"\", \"accept=\\\"image\", \"validator.isAlphanumeric\", \"isAlphanumeric\","
+    },
+    {
+      "line": 16,
+      "pattern": "required",
+      "text": "\"required\", \"type=\\\"file\\\"\", \"accept=\\\"image\", \"validator.isAlphanumeric\", \"isAlphanumeric\","
+    },
+    {
+      "line": 16,
+      "pattern": "validator.isAlphanumeric",
+      "text": "\"required\", \"type=\\\"file\\\"\", \"accept=\\\"image\", \"validator.isAlphanumeric\", \"isAlphanumeric\","
+    },
+    {
+      "line": 16,
+      "pattern": "isAlphanumeric",
+      "text": "\"required\", \"type=\\\"file\\\"\", \"accept=\\\"image\", \"validator.isAlphanumeric\", \"isAlphanumeric\","
+    },
+    {
+      "line": 17,
+      "pattern": "file",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "poster.url",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "poster",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "poster.url",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "<img",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "poster.url",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "playlist",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "addToPlaylist",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "myProfile",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "login",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "register",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 17,
+      "pattern": "resetPassword",
+      "text": "\"<img\", \"poster.url\", \"playlist\", \"addToPlaylist\", \"myProfile\", \"login\", \"register\", \"resetPassword\""
+    },
+    {
+      "line": 35,
+      "pattern": "file",
+      "text": "const files = walkDir(root);"
+    },
+    {
+      "line": 37,
+      "pattern": "file",
+      "text": "for (const file of files) {"
+    },
+    {
+      "line": 39,
+      "pattern": "file",
+      "text": "try { text = fs.readFileSync(file, \"utf8\"); } catch (e) { continue; }"
+    },
+    {
+      "line": 50,
+      "pattern": "file",
+      "text": "if (matches.length) report[file.substring(root.length + 1)] = matches;"
+    },
+    {
+      "line": 53,
+      "pattern": "file",
+      "text": "// Also list top-level config files we expect"
+    },
+    {
+      "line": 54,
+      "pattern": "config.env",
+      "text": "const extras = [\"backend/config/config.env\", \".env\", \"config/config.env\", \"frontend/package.json\", \"backend/package.json\"];"
+    }
+  ],
+  "backend/config/config.env": [
+    {
+      "note": "exists"
+    }
+  ],
+  "frontend/package.json": [
+    {
+      "note": "exists"
+    }
+  ],
+  "backend/package.json": [
+    {
+      "note": "exists"
+    }
+  ]
+}
